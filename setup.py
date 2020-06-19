@@ -17,7 +17,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Michael Mackliet',
     author_email='michael@mackliet.com',
-    download_url='https://github.com/mackliet/church_of_jesus_christ_api',
+    url='https://github.com/mackliet/church_of_jesus_christ_api',
     include_package_data=True,
     packages=find_packages(),
     install_requires=['requests'],
