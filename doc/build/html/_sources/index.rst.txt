@@ -1,4 +1,10 @@
-.. include:: README.rst
+.. include:: ../../README.rst
+   :end-before: Link to full documentation
+
+Examples
+========
+.. literalinclude:: examples.py
+   :language: Python
 
 Modules
 =======

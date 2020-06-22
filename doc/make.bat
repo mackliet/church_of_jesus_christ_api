@@ -12,10 +12,6 @@ if "%SPHIXAPIDOC%" == "" (
 	set SPHIXAPIDOC=sphinx-apidoc
 )
 
-if "%M2R%" == "" (
-	set M2R=m2r
-)
-
 set SOURCEDIR=source
 set BUILDDIR=build
 
@@ -34,8 +30,6 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
-%M2R% ..\README.md --overwrite
-move ..\README.rst %SOURCEDIR%
 %SPHIXAPIDOC% -fTo %SOURCEDIR%/modules  ".." "..\setup.py"
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end
