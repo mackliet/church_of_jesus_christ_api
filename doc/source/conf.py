@@ -32,6 +32,7 @@ release = __version__
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+master_doc = 'index'
 extensions = ['sphinx.ext.autodoc', 'recommonmark', 'sphinx.ext.autosummary', 'sphinx.ext.napoleon']
 napoleon_google_docstring = False
 napoleon_use_param = False
@@ -41,10 +42,6 @@ source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'markdown',
     '.md': 'markdown',
-}
-
-source_parsers = {
-   '.md': 'recommonmark.parser.CommonMarkParser',
 }
 
 from recommonmark.transform import AutoStructify

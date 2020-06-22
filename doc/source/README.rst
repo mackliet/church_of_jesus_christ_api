@@ -6,8 +6,8 @@ This Python package implements an unofficial API for accessing data from churcho
 The endpoints are the same ones used by the Church's website and mobile app, and are therefore
 subject to change in the future.
 
-By default, most methods can be called with default methods and will return information for
-the current unit. In the case where a method is to request information for a member, the default
+By default, most methods can be called with default parameters and will return information for the
+user's unit. In the case where a method is to request information for a member, the default
 is to return information about the current user.
 
 In order to get unit numbers for other units that the user has access to, use user_details to find
