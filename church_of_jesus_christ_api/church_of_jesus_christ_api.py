@@ -28,6 +28,7 @@ def _host(name: str) -> str:
     return f'https://{name}.churchofjesuschrist.org'
 
 _endpoints = {'action-and-interviews' : _host('lcr') + '/services/v2/report/action-interview-list/full?unitNumber={unit}', 
+              'attendance' : _host('lcr') + '/services/umlu/v1/class-and-quorum/attendance/overview/unitNumber/{unit}',
               'birthdays' : _host('lcr') + '/services/report/birthday-list/unit/{unit}?month=1&months=12',
               'donation-history' : _host('donations') + '/donations/history/slips?agencyDonations=false&category=false&summary=true',
               'family-history' : _host('lcr') + '/services/report/family-history/activity?unitNumber={unit}',
@@ -136,6 +137,9 @@ class ChurchOfJesusChristAPI(object):
         '''
         return self.__user_details
 
+    def convert_date_to_string_using_default_date_if_none(self, val, default):
+        return (val if val != None else default).strftime('%Y-%m-%d')
+
     def download_patriarchal_blessing(self, filename: str = 'patriarchal_blessing.pdf') -> None:
         '''
         Downloads user's patriarchal blessing (if available online) and saves it to a file with the given name
@@ -164,6 +168,45 @@ class ChurchOfJesusChristAPI(object):
         '''
 
         return self.__get_JSON(self.__endpoint('action-and-interviews', unit=unit))
+
+    def get_attendance(self, unit: int = None) -> JSONType:
+        '''
+        Returns the attendance list for the last 5 weeks
+
+        Parameters
+
+        unit : int
+            Number of the church unit for which to retrieve the report
+
+        Returns
+
+        .. literalinclude:: ../JSON_schemas/get_attendance-schema.md
+        '''
+
+        return self.__get_JSON(self.__endpoint('attendance', unit=unit))
+
+    def get_attendance_date_range(self, start_date: datetime.date = None, end_date: datetime.date = None, unit: int = None) -> JSONType:
+        '''
+        Returns the attendance list for a given date range (default 1 year ago to today)
+
+        Parameters
+
+        start_date: datetime.date
+            The start date after which attendance will be retrieved
+        end_date: datetime.date
+            The end date after which attendance will no longer be retrieved
+        unit : int
+            Number of the church unit for which to retrieve the report
+
+        Returns
+
+        .. literalinclude:: ../JSON_schemas/get_attendance_date_range-schema.md
+        '''
+
+        start_date = self.convert_date_to_string_using_default_date_if_none(start_date, datetime.datetime.now() - datetime.timedelta(days=365))
+        end_date = self.convert_date_to_string_using_default_date_if_none(end_date, datetime.date.today())
+        
+        return self.__get_JSON(self.__endpoint('attendance', unit=unit) + f'/start/{start_date}/end/{end_date}')
 
     def get_birthdays(self, unit: int = None) -> JSONType:
         '''
@@ -213,11 +256,8 @@ class ChurchOfJesusChristAPI(object):
         .. literalinclude:: ../JSON_schemas/get_donation_history-schema.md
         '''
         
-        def convert_date_to_string_using_default_date_if_none(val, default):
-            return (val if val != None else default).strftime('%Y-%m-%d')
-
-        start_date = convert_date_to_string_using_default_date_if_none(start_date, datetime.date(year=1900, month=1, day=1))
-        end_date = convert_date_to_string_using_default_date_if_none(end_date, datetime.date.today())
+        start_date = self.convert_date_to_string_using_default_date_if_none(start_date, datetime.date(year=1900, month=1, day=1))
+        end_date = self.convert_date_to_string_using_default_date_if_none(end_date, datetime.date.today())
         
         return self.__get_JSON(self.__endpoint('donation-history') + f'&fromDate={start_date}&toDate={end_date}')
     
