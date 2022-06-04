@@ -1,6 +1,6 @@
 import pathlib
 from setuptools import setup, find_packages
-from __version__ import __version__
+from church_of_jesus_christ_api.__version__ import __version__
 
 # The directory containing this file
 HERE = pathlib.Path(__file__).parent
