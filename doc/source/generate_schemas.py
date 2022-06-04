@@ -6,6 +6,7 @@ import sys
 import urllib3
 import re
 import json
+import getpass
 
 #Change directory to directory of this file
 abspath = os.path.abspath(__file__)
@@ -19,7 +20,7 @@ from church_of_jesus_christ_api import ChurchOfJesusChristAPI
 urllib3.disable_warnings()
 
 username = environ['CHURCH_USERNAME'] if 'CHURCH_USERNAME' in environ else input('username: ')
-password = environ['CHURCH_PASSWORD'] if 'CHURCH_PASSWORD' in environ else input('password: ')
+password = environ['CHURCH_PASSWORD'] if 'CHURCH_PASSWORD' in environ else getpass.getpass('password: ')
 
 api = ChurchOfJesusChristAPI(username, password, True)
 

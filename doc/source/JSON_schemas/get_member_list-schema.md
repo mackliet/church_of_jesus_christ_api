@@ -14,8 +14,9 @@
       formattedLine3: NoneType,
       formattedLine4: NoneType
     },
-    age: NoneType,
+    age: int,
     birth: {
+      country: NoneType,
       date: {
         calc: str,
         date: str,
@@ -25,14 +26,16 @@
         calc: str,
         date: str,
         display: str
-      }
+      },
+      place: NoneType
     },
     convert: bool,
     email: str,
     emails: [
       {
         email: str,
-        ownerType: NoneType
+        ownerType: NoneType,
+        useType: NoneType
       }
     ],
     formattedAddress: str,
@@ -65,13 +68,18 @@
         phones: [
           {
             number: str,
-            ownerType: NoneType
+            ownerType: NoneType,
+            useType: NoneType
           }
         ],
         unit: {
+          addressUnknown: NoneType,
+          adminUnit: NoneType,
+          cdolLink: NoneType,
           children: NoneType,
           nameLocal: str,
           parentUnit: NoneType,
+          positions: NoneType,
           unitNumber: int,
           unitType: NoneType,
           uuid: NoneType
@@ -103,7 +111,8 @@
       givenPreferredLocal: str,
       listOfficial: NoneType,
       listPreferred: NoneType,
-      listPreferredLocal: str
+      listPreferredLocal: str,
+      spokenPreferredLocal: NoneType
     },
     nameGivenPreferredLocal: str,
     nameListPreferredLocal: str,
@@ -112,6 +121,8 @@
     personStatusFlags: {
       adult: bool,
       convert: bool,
+      deceased: bool,
+      hasPatriarchalBlessing: bool,
       member: bool,
       prospectiveElder: bool,
       singleAdult: bool,
@@ -122,11 +133,12 @@
     phones: [
       {
         number: str,
-        ownerType: NoneType
+        ownerType: NoneType,
+        useType: NoneType
       }
     ],
     positions: NoneType,
-    priesthoodOffice: NoneType,
+    priesthoodOffice: str,
     priesthoodTeacherOrAbove: bool,
     sex: str,
     unitName: str,

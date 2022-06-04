@@ -5,6 +5,7 @@
   authorizedToPrintMelchizedekPriesthood: bool,
   authorizedToUpdateContactInfo: bool,
   authorizedToUpdateRecord: bool,
+  authorizedToViewAnnotations: bool,
   authorizedToViewHTVT: bool,
   authorizedToViewRecord: bool,
   authorizedToViewReportBasic: bool,
@@ -38,7 +39,7 @@
       sealingTemple: NoneType,
       showTempleInfo: bool,
       spouse: {
-        age: NoneType,
+        age: int,
         allPriesthoodOrdinations: NoneType,
         birthDate: str,
         deathDate: NoneType,
@@ -79,6 +80,7 @@
       templeId: NoneType,
       terminationDate: NoneType,
       updateName: NoneType,
+      updateRequests: NoneType,
       warnings: {}
     },
     parents: NoneType
@@ -104,7 +106,7 @@
     hohMrn: NoneType,
     members: [
       {
-        age: NoneType,
+        age: int,
         allPriesthoodOrdinations: NoneType,
         birthDate: str,
         deathDate: NoneType,
@@ -138,29 +140,30 @@
     ]
   },
   individual: {
-    actualAge: NoneType,
-    actualAgeInMonths: NoneType,
+    actualAge: int,
+    actualAgeInMonths: int,
     adultAgeOrMarried: bool,
-    age: NoneType,
-    ageAsOfDec31: NoneType,
+    age: int,
+    ageAsOfDec31: int,
     ageAsOfDec31NextYear: NoneType,
     birthCountry: NoneType,
     birthCountryId: NoneType,
     birthDate: str,
     birthDateDisplay: str,
     birthPlace: NoneType,
-    canHaveCalling: NoneType,
+    canHaveCalling: bool,
     canHaveHTAssignment: bool,
     canHaveMaidenName: bool,
     canHaveVTAssignment: bool,
     confidentialEvents: NoneType,
     email: str,
-    endowed: NoneType,
+    endowed: bool,
     errors: {},
     formattedHouseholdCoupleName: str,
     formattedMrn: NoneType,
     gender: str,
     hasOutOfUnitRecord: bool,
+    hasPatriarchalBlessing: bool,
     head: bool,
     headInUnit: bool,
     hohId: int,
@@ -245,8 +248,8 @@
       name2: NoneType,
       name3: NoneType
     },
-    priesthood: NoneType,
-    priesthoodCode: NoneType,
+    priesthood: str,
+    priesthoodCode: int,
     primaryUnitName: str,
     primaryUnitNumber: NoneType,
     priorUnitName: NoneType,
@@ -269,16 +272,128 @@
       units: NoneType
     },
     restorationOfBlessingsRequired: bool,
-    sealedToSpouse: NoneType,
+    sealedToSpouse: bool,
     spouseId: int,
     spouseInUnit: bool,
     spouseName: str,
+    templeRecStatuses: NoneType,
     unitName: str,
     unitNumber: str,
+    updateRequests: NoneType,
     warnings: {}
   },
   individualName: str,
-  ordinances: NoneType,
+  membershipUpdateRequests: NoneType,
+  ordinances: {
+    allOrdinances: [
+      {
+        bic: bool,
+        date: NoneType,
+        note: NoneType,
+        occurred: bool,
+        ordinanceName: str,
+        ordinanceType: str,
+        templeId: NoneType,
+        updateRequestExists: bool
+      }
+    ],
+    baptism: {
+      bic: bool,
+      date: NoneType,
+      note: NoneType,
+      occurred: bool,
+      ordinanceName: str,
+      ordinanceType: str,
+      templeId: NoneType,
+      updateRequestExists: bool
+    },
+    bic: {
+      bic: bool,
+      date: NoneType,
+      note: NoneType,
+      occurred: bool,
+      ordinanceName: str,
+      ordinanceType: str,
+      templeId: NoneType,
+      updateRequestExists: bool
+    },
+    confirmation: {
+      bic: bool,
+      date: NoneType,
+      note: NoneType,
+      occurred: bool,
+      ordinanceName: str,
+      ordinanceType: str,
+      templeId: NoneType,
+      updateRequestExists: bool
+    },
+    endowment: {
+      bic: bool,
+      date: NoneType,
+      note: NoneType,
+      occurred: bool,
+      ordinanceName: str,
+      ordinanceType: str,
+      templeId: NoneType,
+      updateRequestExists: bool
+    },
+    errors: {},
+    hasEditableFields: bool,
+    ordinanceFields: [
+      str
+    ],
+    priesthoods: {
+      apostle: NoneType,
+      deacon: NoneType,
+      elder: {
+        aaronic: bool,
+        bic: bool,
+        date: NoneType,
+        melchizedek: bool,
+        note: NoneType,
+        occurred: bool,
+        ordinanceName: str,
+        ordinanceType: str,
+        priesthoodType: NoneType,
+        templeId: NoneType,
+        updateRequestExists: bool
+      },
+      highPriest: NoneType,
+      priest: NoneType,
+      priesthoods: [
+        {
+          aaronic: bool,
+          bic: bool,
+          date: NoneType,
+          melchizedek: bool,
+          note: NoneType,
+          occurred: bool,
+          ordinanceName: str,
+          ordinanceType: str,
+          priesthoodType: NoneType,
+          templeId: NoneType,
+          updateRequestExists: bool
+        }
+      ],
+      seventy: NoneType,
+      teacher: NoneType,
+      unknown: NoneType
+    },
+    restorationOfBlessings: bool,
+    sealedToParents: NoneType,
+    sealedToSpouse: {
+      bic: bool,
+      date: NoneType,
+      note: NoneType,
+      occurred: bool,
+      ordinanceName: str,
+      ordinanceType: str,
+      templeId: NoneType,
+      updateRequestExists: bool
+    },
+    updateRequests: NoneType,
+    warnings: {}
+  },
   outOfUnitMember: bool,
   recommend: NoneType,
   showNotEditEnabledMessage: bool,

@@ -7,6 +7,9 @@
   ],
   individualId: int,
   ldsAccountId: int,
+  leaderParentUnits: [
+    int
+  ],
   member: bool,
   parentUnits: [
     int

@@ -6,7 +6,16 @@
       headOfHouseholdUuid: str,
       householdName: str,
       householdSortOrder: int,
-      ministeringBrothers: list,
+      ministeringBrothers: [
+        {
+          age: int,
+          legacyCmisId: int,
+          name: str,
+          nameOrder: int,
+          personUuid: str,
+          youthBasedOnAge: bool
+        }
+      ],
       ministeringSisters: list,
       unitName: str,
       unitNumber: int
@@ -16,6 +25,7 @@
     {
       assignments: [
         {
+          age: int,
           legacyCmisId: int,
           name: str,
           nameOrder: int,
@@ -25,6 +35,7 @@
       ],
       companions: [
         {
+          age: int,
           legacyCmisId: int,
           name: str,
           nameOrder: int,

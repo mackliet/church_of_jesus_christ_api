@@ -54,6 +54,7 @@ _endpoints = {'action-and-interviews' : _host('lcr') + '/services/v2/report/acti
               'seminary-quarters' : _host('lcr') + '/services/report/si-qr/quarters?unitNumber={unit}',
               'seminary-report' : _host('lcr') + '/services/report/si-qr/summary?unitNumber={unit}',
               'statistics' : _host('lcr') + '/services/report/unit-statistics?unitNumber={unit}',
+              'suborganization' : _host('lcr') + '/services/orgs/sub-orgs-with-callings?unitNumber={unit}&subOrgId={org_id}',
               'unit-organizations' : _host('lcr') + '/services/orgs/sub-orgs-with-callings?unitNumber={unit}',
               'user' : _host('wam-membertools-api') + '/api/v4/user'
 }
@@ -77,6 +78,7 @@ class ChurchOfJesusChristAPI(object):
 
         self.__session = requests.Session()
         self.__user_details = None
+        self.__org_id = None
         self.__verify_SSL = not debug_mode
 
         # Oauth info used by member tools. Slightly obfuscated, but by no means hidden
@@ -100,8 +102,12 @@ class ChurchOfJesusChristAPI(object):
 
         # Set user details
         self.__user_details = self.__get_JSON(self.__endpoint('user'))
+
+        # Set SUNDAY_GENDER class org id
+        self.__org_id = next(assignment for assignment in self.get_member_callings_and_classes()['classAssignments'] \
+                    if assignment['group'] == 'SUNDAY_GENDER')['classId']
     
-    def __endpoint(self, name: str, unit: int = None, member_id: int = None, uuid: str = None) -> str:
+    def __endpoint(self, name: str, unit: int = None, org_id: int = None, member_id: int = None, uuid: str = None) -> str:
         endpoint = _endpoints[name]
         def default_if_none(val, default):
             return str(val if val != None else default)
@@ -110,12 +116,14 @@ class ChurchOfJesusChristAPI(object):
             endpoint = endpoint.replace('{unit}', default_if_none(unit, self.__user_details['homeUnits'][0]))
             endpoint = endpoint.replace('{member_id}', default_if_none(member_id, self.__user_details['individualId']))
             endpoint = endpoint.replace('{uuid}', default_if_none(uuid, self.__user_details['uuid']))
+        if self.__org_id:
+            endpoint = endpoint.replace('{org_id}', default_if_none(uuid, self.__org_id))
         return endpoint
 
-    def __get_JSON(self, endpoint: str, headers: Dict[str,str] = None) -> JSONType:
+    def __get_JSON(self, endpoint: str) -> JSONType:
         return self.__session.get(
                 endpoint, 
-                headers=headers, 
+                headers={'Accept': 'application/json'}, 
                 timeout=15, 
                 verify=self.__verify_SSL).json()
     
@@ -136,6 +144,10 @@ class ChurchOfJesusChristAPI(object):
         .. literalinclude:: ../JSON_schemas/user_details-schema.md
         '''
         return self.__user_details
+
+    @property
+    def org_id(self):
+        return self.__org_id
 
     def convert_date_to_string_using_default_date_if_none(self, val, default):
         return (val if val != None else default).strftime('%Y-%m-%d')
@@ -544,6 +556,23 @@ class ChurchOfJesusChristAPI(object):
         '''
         
         return self.__get_JSON(self.__endpoint('unit-organizations', unit=unit))
+
+    def get_suborganization(self, org_id: int = None, unit: int = None) -> JSONType:
+        '''
+        Returns information for a given suborganization of a unit
+
+        Parameters
+        org_id : int
+            Number of the suborganization of the unit for which to retrieve the report. Defaults
+            to the class assignment for gendered class (Elders' Quorum, Relief Society, etc.).
+        unit : int
+            Number of the church unit for which to retrieve the report
+
+        Returns
+        
+        .. literalinclude:: ../JSON_schemas/get_suborganization-schema.md
+        '''
+        return self.__get_JSON(self.__endpoint('suborganization', org_id=org_id, unit=unit))[0]
 
     def get_unit_statistics(self, unit: int = None) -> JSONType:
         '''
