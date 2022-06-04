@@ -3,14 +3,14 @@
     birthdays: [
       {
         accountable: bool,
-        actualAge: NoneType,
-        actualAgeInMonths: NoneType,
+        actualAge: int,
+        actualAgeInMonths: int,
         address: str,
-        age: NoneType,
+        age: int,
         birthDate: str,
         birthDateFormatted: str,
         birthDateSort: str,
-        birthDayAge: NoneType,
+        birthDayAge: int,
         birthDayFormatted: str,
         birthDaySort: str,
         dayInteger: int,

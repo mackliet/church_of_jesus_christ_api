@@ -47,6 +47,7 @@
         memberUnitNumber: int,
         missionName: NoneType,
         missionUnitNumber: NoneType,
+        missionary: bool,
         missionaryHomeUnitName: NoneType,
         mrn: NoneType,
         nameVerificationForMrn: NoneType,

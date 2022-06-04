@@ -2,7 +2,7 @@
   {
     address: str,
     addressUnknown: bool,
-    age: NoneType,
+    age: int,
     birthdate: str,
     birthdateCalc: str,
     gender: str,

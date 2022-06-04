@@ -2,7 +2,7 @@
   {
     activeCalender: str,
     activeDate: str,
-    age: NoneType,
+    age: int,
     birthDate: str,
     birthDateSort: str,
     birthdDateDisplay: str,
@@ -23,7 +23,7 @@
     nameOrder: int,
     organization: str,
     outOfUnit: bool,
-    parentSubOrgId: int,
+    parentSubOrgId: NoneType,
     phone: str,
     position: str,
     positionId: int,

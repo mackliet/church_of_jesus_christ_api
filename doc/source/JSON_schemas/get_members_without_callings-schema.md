@@ -1,9 +1,9 @@
 [
   {
     accountable: bool,
-    actualAge: NoneType,
-    actualAgeInMonths: NoneType,
-    age: NoneType,
+    actualAge: int,
+    actualAgeInMonths: int,
+    age: int,
     birthDate: str,
     birthDateFormatted: str,
     birthDateSort: str,

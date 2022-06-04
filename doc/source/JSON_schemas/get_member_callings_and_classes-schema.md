@@ -47,6 +47,7 @@
       memberUnitNumber: NoneType,
       missionName: NoneType,
       missionUnitNumber: NoneType,
+      missionary: bool,
       missionaryHomeUnitName: NoneType,
       mrn: NoneType,
       nameVerificationForMrn: NoneType,
@@ -59,12 +60,12 @@
       otherAllowedSubOrgs: [
         {
           children: list,
-          classGroup: str,
+          classGroup: NoneType,
           defaultOrgTypeIds: [
             int
           ],
           firstTypeId: int,
-          gender: str,
+          gender: NoneType,
           isClass: bool,
           isCombined: bool,
           isRealClass: bool,
@@ -146,6 +147,7 @@
       memberUnitNumber: NoneType,
       missionName: NoneType,
       missionUnitNumber: NoneType,
+      missionary: bool,
       missionaryHomeUnitName: NoneType,
       mrn: NoneType,
       nameVerificationForMrn: NoneType,
@@ -172,7 +174,7 @@
           orgTypeIds: [
             int
           ],
-          parentName: NoneType,
+          parentName: str,
           subOrgId: int,
           unitNumber: int,
           userCanEditCallings: bool
@@ -212,5 +214,27 @@
       vacant: bool
     }
   ],
-  subOrgsForPotentialNewCallings: list
+  subOrgsForPotentialNewCallings: [
+    {
+      children: list,
+      classGroup: NoneType,
+      defaultOrgTypeIds: [
+        int
+      ],
+      firstTypeId: int,
+      gender: NoneType,
+      isClass: bool,
+      isCombined: bool,
+      isRealClass: bool,
+      isSplit: bool,
+      name: str,
+      orgTypeIds: [
+        int
+      ],
+      parentName: str,
+      subOrgId: int,
+      unitNumber: int,
+      userCanEditCallings: bool
+    }
+  ]
 }
