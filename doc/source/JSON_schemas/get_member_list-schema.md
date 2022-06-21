@@ -94,6 +94,7 @@
     householdPhoneNumber: str,
     householdRole: str,
     householdUuid: str,
+    households: NoneType,
     isAdult: bool,
     isHead: bool,
     isMember: bool,

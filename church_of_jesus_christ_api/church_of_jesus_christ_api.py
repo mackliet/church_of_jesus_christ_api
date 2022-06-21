@@ -41,6 +41,7 @@ _endpoints = {'action-and-interviews' : _host('lcr') + '/services/v2/report/acti
               'members-with-callings' : _host('lcr') + '/services/report/members-with-callings?unitNumber={unit}',
               'members-without-callings' : _host('lcr') + '/services/orgs/members-without-callings?unitNumber={unit}',
               'ministering' : _host('lcr') + '/services/umlu/v1/ministering-assignments/ministering-assignments-report?unitNumber={unit}',
+              'ministering-full' : _host('lcr') + '/services/umlu/v1/ministering/data-full?unitNumber={unit}',
               'missionary-progress-record' : _host('lcr') + '/services/report/progress-record/{unit}/teaching-pool',
               'missionary-indicators' : _host('lcr') + '/services/report/progress-record/{unit}/key-indicators',
               'mobile-sync' : _host('wam-membertools-api') + '/api/v4/sync?units={unit}&force=true',
@@ -400,6 +401,22 @@ class ChurchOfJesusChristAPI(object):
         '''
         
         return self.__get_JSON(self.__endpoint('ministering', unit=unit))
+
+    def get_ministering_full(self, unit: int = None) -> JSONType:
+        '''
+        Returns the unit ministering assignments as well as interview information
+
+        Parameters
+        
+        unit : int
+            Number of the church unit for which to retrieve the report
+
+        Returns
+        
+        .. literalinclude:: ../JSON_schemas/get_ministering_full-schema.md
+        '''
+        
+        return self.__get_JSON(self.__endpoint('ministering-full', unit=unit))
 
     def get_missionary_indicators(self, unit: int = None) -> JSONType:
         '''

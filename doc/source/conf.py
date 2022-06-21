@@ -21,7 +21,7 @@ sys.setrecursionlimit(1500)
 from __version__ import __version__
 
 project = 'Church of Jesus Christ API'
-copyright = '2020, Michael Mackliet'
+copyright = '2022, Michael Mackliet'
 author = 'Michael Mackliet'
 
 # The full version, including alpha/beta/rc tags

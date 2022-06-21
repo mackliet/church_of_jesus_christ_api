@@ -17,7 +17,7 @@
     moveDateOrder: int,
     name: str,
     nameOrder: int,
-    phone: str,
+    phone: NoneType,
     priesthood: NoneType,
     priorUnitName: str,
     priorUnitNumber: str,
