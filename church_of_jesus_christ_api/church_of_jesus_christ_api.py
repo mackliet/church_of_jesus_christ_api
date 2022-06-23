@@ -731,7 +731,7 @@ class ChurchOfJesusChristAPI(object):
 
         Returns
 
-        .. literalinclude:: ../JSON_schemas/get_full_time_missionaries-schema.md
+        .. literalinclude:: ../JSON_schemas/get_assigned_missionaries-schema.md
         """
         return self.__get_JSON(self.__endpoint("assigned-missionaries", unit=unit))
 
