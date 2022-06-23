@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.1.11 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.1.12 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -162,6 +162,79 @@ as getting member data, calling information, reports, etc.</p>
     <span class="n">tab</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_assigned_missionaries">
+<code class="descname">get_assigned_missionaries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_assigned_missionaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the missionaries currently assigned to serve in the unit</p>
+<p>Parameters
+unit : int</p>
+<blockquote>
+<div><p>Number of the church unit for which to retrieve the report</p>
+</div></blockquote>
+<p>Returns</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">endDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">member</span><span class="p">:</span> <span class="p">{</span>
+      <span class="n">accountable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">actualAge</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">actualAgeInMonths</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">birthDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">birthDateFormatted</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">birthDateSort</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">birthDayFormatted</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">birthDaySort</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">formattedMrn</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">gender</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">genderCode</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">genderLabelShort</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">householdEmail</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">householdPhone</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">missionOfficeAddress</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">missionUnitName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">missionUnitNumber</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">mrn</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">nameOrder</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">nonMember</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">notAccountable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">outOfUnitMember</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">phone</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">priesthood</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">priesthoodCode</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">priesthoodType</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">setApart</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">spokenName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">sustainedDate</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">unitName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">unitNumber</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">urlAddressSearch</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">visible</span><span class="p">:</span> <span class="n">NoneType</span>
+    <span class="p">},</span>
+    <span class="n">missionName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">missionOfficeAddress</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">missionUnitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">missionaryHomeUnitName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">missionaryHomeUnitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">missionaryIndividualId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">missionaryName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">myPlanComplete</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">myPlanSharing</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">myPlanUrl</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">seniorMissionary</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">startDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">urlAddressSearch</span><span class="p">:</span> <span class="n">NoneType</span>
   <span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
@@ -646,6 +719,79 @@ as getting member data, calling information, reports, etc.</p>
     <span class="p">]</span>
   <span class="p">}</span>
 <span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_full_time_missionaries">
+<code class="descname">get_full_time_missionaries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_full_time_missionaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the members from the unit currently serving missions</p>
+<p>Parameters
+unit : int</p>
+<blockquote>
+<div><p>Number of the church unit for which to retrieve the report</p>
+</div></blockquote>
+<p>Returns</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">endDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">member</span><span class="p">:</span> <span class="p">{</span>
+      <span class="n">accountable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">actualAge</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">actualAgeInMonths</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">birthDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">birthDateFormatted</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">birthDateSort</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">birthDayFormatted</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">birthDaySort</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">formattedMrn</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">gender</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">genderCode</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">genderLabelShort</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">householdEmail</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">householdPhone</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">missionOfficeAddress</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">missionUnitName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">missionUnitNumber</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">mrn</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">nameOrder</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">nonMember</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">notAccountable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">outOfUnitMember</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">phone</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">priesthood</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">priesthoodCode</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">priesthoodType</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">setApart</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">spokenName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">sustainedDate</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">unitName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">unitNumber</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">urlAddressSearch</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">visible</span><span class="p">:</span> <span class="n">NoneType</span>
+    <span class="p">},</span>
+    <span class="n">missionName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">missionOfficeAddress</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">missionUnitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">missionaryHomeUnitName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">missionaryHomeUnitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">missionaryIndividualId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">missionaryName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">myPlanComplete</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">myPlanSharing</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">myPlanUrl</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">seniorMissionary</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">startDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">urlAddressSearch</span><span class="p">:</span> <span class="n">NoneType</span>
+  <span class="p">}</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1565,8 +1711,8 @@ as getting member data, calling information, reports, etc.</p>
     <span class="n">positionTypeId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">priesthood</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
     <span class="n">setApart</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-    <span class="n">setApartCalender</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
-    <span class="n">setApartDate</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">setApartCalender</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">setApartDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">spokenName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">stake</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
     <span class="n">standardPosition</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
@@ -1923,10 +2069,10 @@ as getting member data, calling information, reports, etc.</p>
     <span class="n">moveDateOrder</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">nameOrder</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">phone</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">priesthood</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
-    <span class="n">priorUnitName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-    <span class="n">priorUnitNumber</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">priorUnitName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">priorUnitNumber</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
     <span class="n">textAddress</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">unitName</span><span class="p">:</span> <span class="nb">str</span>
   <span class="p">}</span>
@@ -2041,8 +2187,8 @@ as getting member data, calling information, reports, etc.</p>
       <span class="n">positionTypeId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">priesthood</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
       <span class="n">setApart</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-      <span class="n">setApartCalender</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
-      <span class="n">setApartDate</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">setApartCalender</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">setApartDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
       <span class="n">spokenName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
       <span class="n">stake</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
       <span class="n">standardPosition</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>

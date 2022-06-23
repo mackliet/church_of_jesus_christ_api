@@ -17,10 +17,10 @@
     moveDateOrder: int,
     name: str,
     nameOrder: int,
-    phone: NoneType,
+    phone: str,
     priesthood: NoneType,
-    priorUnitName: str,
-    priorUnitNumber: str,
+    priorUnitName: NoneType,
+    priorUnitNumber: NoneType,
     textAddress: str,
     unitName: str
   }

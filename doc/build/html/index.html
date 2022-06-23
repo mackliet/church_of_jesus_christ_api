@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Church of Jesus Christ API &mdash; Church of Jesus Christ API 0.1.11 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Church of Jesus Christ API &mdash; Church of Jesus Christ API 0.1.12 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -80,8 +80,8 @@ different unit numbers available to the user.</p>
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 
-<span class="n">username</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CHURCH_USERNAME&#39;</span><span class="p">]</span>
-<span class="n">password</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CHURCH_PASSWORD&#39;</span><span class="p">]</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CHURCH_USERNAME&quot;</span><span class="p">]</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CHURCH_PASSWORD&quot;</span><span class="p">]</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">ChurchOfJesusChristAPI</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 
@@ -92,8 +92,10 @@ different unit numbers available to the user.</p>
 <span class="n">birthday_list</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_birthdays</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">birthday_list</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">month</span><span class="p">[</span><span class="s1">&#39;birthdays&#39;</span><span class="p">]:</span>
-        <span class="n">birthdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">member</span><span class="p">[</span><span class="s1">&#39;birthDayFormatted&#39;</span><span class="p">],</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> %b&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">month</span><span class="p">[</span><span class="s2">&quot;birthdays&quot;</span><span class="p">]:</span>
+        <span class="n">birthdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
+            <span class="n">member</span><span class="p">[</span><span class="s2">&quot;birthDayFormatted&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> %b&quot;</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">birthdate</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="n">today</span><span class="o">.</span><span class="n">month</span> <span class="ow">and</span> <span class="n">birthdate</span><span class="o">.</span><span class="n">day</span> <span class="o">==</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;It&#39;s </span><span class="si">{</span><span class="n">member</span><span class="p">[</span><span class="s1">&#39;spokenName&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39;s birthday today!&quot;</span><span class="p">)</span>
 
@@ -103,7 +105,9 @@ different unit numbers available to the user.</p>
 <span class="n">moved_in_list</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_moved_in</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">moved_in_list</span><span class="p">:</span>
-    <span class="n">move_date</span> <span class="o">=</span> <span class="n">birthdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="s1">&#39;moveDate&#39;</span><span class="p">],</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> %b %Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+    <span class="n">move_date</span> <span class="o">=</span> <span class="n">birthdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
+        <span class="n">record</span><span class="p">[</span><span class="s2">&quot;moveDate&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> %b %Y&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">move_date</span> <span class="o">==</span> <span class="n">yesterday</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Records for </span><span class="si">{</span><span class="n">record</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> arrived to the unit yesterday&quot;</span><span class="p">)</span>
 
@@ -111,7 +115,9 @@ different unit numbers available to the user.</p>
 
 <span class="c1"># Same as api.get_missionary_progress_record(unit=api.user_details[&#39;homeUnits&#39;][0])</span>
 <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">get_missionary_progress_record</span><span class="p">():</span>
-    <span class="n">last_vist_timestamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="s1">&#39;lastVisit&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mf">1000.0</span> <span class="c1"># Convert milliseconds to seconds</span>
+    <span class="n">last_vist_timestamp</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="nb">int</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="s2">&quot;lastVisit&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="mf">1000.0</span>
+    <span class="p">)</span>  <span class="c1"># Convert milliseconds to seconds</span>
 
     <span class="k">if</span> <span class="n">last_vist_timestamp</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No last visit recorded for </span><span class="si">{</span><span class="n">record</span><span class="p">[</span><span class="s1">&#39;fullName&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
