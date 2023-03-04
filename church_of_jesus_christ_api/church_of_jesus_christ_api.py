@@ -87,6 +87,7 @@ _endpoints = {
     "unit-organizations": _host("lcr")
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}",
     "user": _host("wam-membertools-api") + "/api/v4/user",
+    "units": _host("directory") + "/api/v4/units/{unit}",
 }
 
 
@@ -750,3 +751,20 @@ class ChurchOfJesusChristAPI(object):
         """
 
         return self.__get_JSON(self.__endpoint("statistics", unit=unit))
+
+    def get_units(self, unit: int = None) -> JSONType:
+        """
+        Returns information about the stake and it's child units
+
+        Parameters
+
+        unit : int
+            Number of the church unit for which to retrieve the data
+
+        Returns
+
+        .. literalinclude:: ../JSON_schemas/get_units-schema.md
+        """
+
+        return self.__get_JSON(self.__endpoint("units", unit=unit))
+
