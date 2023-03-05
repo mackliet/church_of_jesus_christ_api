@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.1.12 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.1.13 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -1989,12 +1989,18 @@ unit : int</p>
 </dl>
 <p>Returns</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="n">accessDenied</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-  <span class="n">error</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-  <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-  <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-  <span class="n">status</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-  <span class="n">timestamp</span><span class="p">:</span> <span class="nb">str</span>
+  <span class="n">keyIndicators</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="n">actual</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">calculationDescription</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">goal</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="n">reportEnd</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+  <span class="n">reportStart</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -2010,13 +2016,315 @@ unit : int</p>
 </dd>
 </dl>
 <p>Returns</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="n">address</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">assignedMissionaries</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="n">accountable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">actualAge</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">actualAgeInMonths</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">age</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">birthDate</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">birthDateFormatted</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">birthDateSort</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">birthDayFormatted</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">birthDaySort</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">formattedMrn</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">gender</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">genderCode</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">genderLabelShort</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">householdEmail</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">householdPhone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">mrn</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">nameOrder</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">nonMember</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">notAccountable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">outOfUnitMember</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">priesthood</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">priesthoodCode</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">priesthoodType</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">setApart</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">spokenName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">sustainedDate</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">unitName</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">unitNumber</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+        <span class="n">visible</span><span class="p">:</span> <span class="n">NoneType</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="n">baptism_date</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">baptism_goal_date</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">cmis_id</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">confirmation_date</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">email</span><span class="p">:</span> <span class="p">{</span>
+      <span class="n">family</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">home</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">other</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">work</span><span class="p">:</span> <span class="n">NoneType</span>
+    <span class="p">},</span>
+    <span class="n">fellowshippers</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">first_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">formattedBaptismDate</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">formattedLastSacramentAttendance</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">formattedLastVisit</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">fullName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">gender</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">last6Sundays</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="n">attended</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">date</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">formattedDate</span><span class="p">:</span> <span class="nb">str</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="n">lastSacramentAttendance</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">lastVisit</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">last_name</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">mem_taught</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">member</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">memberFellowshippers</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">missionaries</span><span class="p">:</span> <span class="p">{</span>
+      <span class="n">area_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">names</span><span class="p">:</span> <span class="p">[</span>
+        <span class="nb">str</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="n">needs</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">otherFellowshippers</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">person_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">phone</span><span class="p">:</span> <span class="p">{</span>
+      <span class="n">home</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">mobile</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">other</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">work</span><span class="p">:</span> <span class="n">NoneType</span>
+    <span class="p">},</span>
+    <span class="n">sacramentAttendanceFilters</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">sacrament_attendance</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">statusFilters</span><span class="p">:</span> <span class="p">[</span>
+      <span class="nb">str</span>
+    <span class="p">],</span>
+    <span class="n">statusName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">teachingRecord</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+    <span class="n">visitFilters</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">visits</span><span class="p">:</span> <span class="nb">list</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_mobile_sync_data">
+<code class="descname">get_mobile_sync_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_mobile_sync_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns data that can be found in the Member Tools app. This is the endpoint
+used by the app when an update is requested.</p>
+<p>Parameters</p>
+<dl class="simple">
+<dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+</dl>
+<p>Returns</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="n">accessDenied</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-  <span class="n">error</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-  <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-  <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-  <span class="n">status</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-  <span class="n">timestamp</span><span class="p">:</span> <span class="nb">str</span>
+  <span class="n">authorized</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+  <span class="n">households</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="n">address</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">coordinates</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">lat</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">long</span><span class="p">:</span> <span class="nb">float</span>
+      <span class="p">},</span>
+      <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">familyName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">members</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="n">classes</span><span class="p">:</span> <span class="p">[</span>
+            <span class="nb">str</span>
+          <span class="p">],</span>
+          <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">familyName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">givenName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">head</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+          <span class="n">householdUuid</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">individualId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="n">permissions</span><span class="p">:</span> <span class="p">[</span>
+            <span class="nb">str</span>
+          <span class="p">],</span>
+          <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">positions</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+              <span class="n">setApart</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+              <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+              <span class="n">unitName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+              <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+              <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+            <span class="p">}</span>
+          <span class="p">],</span>
+          <span class="n">preferredName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="n">permissions</span><span class="p">:</span> <span class="p">[</span>
+        <span class="nb">str</span>
+      <span class="p">],</span>
+      <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">verified</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="n">ministering</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="n">assignments</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="n">companions</span><span class="p">:</span> <span class="p">[</span>
+            <span class="nb">str</span>
+          <span class="p">],</span>
+          <span class="n">members</span><span class="p">:</span> <span class="p">[</span>
+            <span class="nb">str</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="n">missionLeaders</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="n">leader</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">optedIn</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">preferredName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+      <span class="p">},</span>
+      <span class="n">mission</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
+      <span class="p">},</span>
+      <span class="n">optedIn</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+      <span class="n">serviceEnded</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">serviceStarted</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">spouse</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">optedIn</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">preferredName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+      <span class="p">},</span>
+      <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="n">missionariesAssigned</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="n">areaId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">mission</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">address</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span>
+      <span class="p">},</span>
+      <span class="n">missionaries</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">preferredName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">sex</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">unitNumbers</span><span class="p">:</span> <span class="p">[</span>
+        <span class="nb">int</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="n">missionariesServing</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">mission</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">address</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span>
+      <span class="p">},</span>
+      <span class="n">preferredName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">sex</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="n">organizations</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">orgTypes</span><span class="p">:</span> <span class="p">[</span>
+        <span class="nb">str</span>
+      <span class="p">],</span>
+      <span class="n">positions</span><span class="p">:</span> <span class="p">[</span>
+        <span class="nb">str</span>
+      <span class="p">],</span>
+      <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="n">reportsAccess</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">cdolAccess</span><span class="p">:</span> <span class="nb">bool</span>
+  <span class="p">},</span>
+  <span class="n">toEpoch</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">unitSubscriptions</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nb">int</span>
+  <span class="p">],</span>
+  <span class="n">units</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="n">childUnits</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+          <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+      <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="n">user</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">authorized</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">country</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">developer</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">homeUnits</span><span class="p">:</span> <span class="p">[</span>
+      <span class="nb">int</span>
+    <span class="p">],</span>
+    <span class="n">individualId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">ldsAccountId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">member</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">mrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">parentUnits</span><span class="p">:</span> <span class="p">[</span>
+      <span class="nb">int</span>
+    <span class="p">],</span>
+    <span class="n">preferredLanguage</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">preferredName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">proxyEdit</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">proxyUnit</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">proxyUser</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">templeNearest</span><span class="p">:</span> <span class="p">[</span>
+      <span class="nb">int</span>
+    <span class="p">],</span>
+    <span class="n">templeUnits</span><span class="p">:</span> <span class="p">[</span>
+      <span class="nb">int</span>
+    <span class="p">],</span>
+    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
+  <span class="p">},</span>
+  <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">}</span>
 </pre></div>
 </div>

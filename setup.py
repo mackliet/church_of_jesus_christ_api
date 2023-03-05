@@ -1,6 +1,9 @@
 import pathlib
 from setuptools import setup, find_packages
-from church_of_jesus_christ_api.__version__ import __version__
+
+# Set __version__ without importing anything and causing issues at package build time
+with open("church_of_jesus_christ_api/__version__.py") as version_file:
+    exec(version_file.read())
 
 # The directory containing this file
 HERE = pathlib.Path(__file__).parent

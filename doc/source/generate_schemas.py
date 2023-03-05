@@ -73,7 +73,10 @@ for attr in sorted(dir(api)):
                 ret_val, lambda leaf: type(leaf).__name__
             )
 
+            assert("accessDenied" not in schema_example or schema_example["accessDenied"] == False)
+
             print(json.dumps(actual_example, indent=2, sort_keys=True))
+
             open(f"JSON_schemas/{attr}-schema.md", "w").write(
                 "\n".join(
                     line.replace('"', "")

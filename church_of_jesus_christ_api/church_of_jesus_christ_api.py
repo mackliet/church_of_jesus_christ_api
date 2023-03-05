@@ -144,13 +144,6 @@ class ChurchOfJesusChristAPI(object):
         # Set user details
         self.__user_details = self.__get_JSON(self.__endpoint("user"))
 
-        # Set SUNDAY_GENDER class org id
-        self.__org_id = next(
-            assignment
-            for assignment in self.get_member_callings_and_classes()["classAssignments"]
-            if assignment["group"] == "SUNDAY_GENDER"
-        )["classId"]
-
     def __endpoint(
         self,
         name: str,
@@ -315,6 +308,23 @@ class ChurchOfJesusChristAPI(object):
         """
 
         return self.__get_JSON(self.__endpoint("birthdays", unit=unit))
+    
+    def get_mobile_sync_data(self, unit: int = None) -> JSONType:
+        """
+        Returns data that can be found in the Member Tools app. This is the endpoint
+        used by the app when an update is requested.
+
+        Parameters
+
+        unit : int
+            Number of the church unit for which to retrieve the report
+
+        Returns
+
+        .. literalinclude:: ../JSON_schemas/get_mobile_sync_data-schema.md
+        """
+
+        return self.__get_JSON(self.__endpoint("mobile-sync", unit=unit))
 
     def get_directory(self, unit: int = None) -> JSONType:
         """
@@ -330,7 +340,7 @@ class ChurchOfJesusChristAPI(object):
         .. literalinclude:: ../JSON_schemas/get_directory-schema.md
         """
 
-        return self.__get_JSON(self.__endpoint("mobile-sync", unit=unit))["households"]
+        return self.get_mobile_sync_data()["households"]
 
     def get_donation_history(
         self, start_date: datetime.date = None, end_date: datetime.date = None
@@ -703,6 +713,14 @@ class ChurchOfJesusChristAPI(object):
 
         .. literalinclude:: ../JSON_schemas/get_suborganization-schema.md
         """
+        if org_id is None and self.__org_id is None:
+            # Set SUNDAY_GENDER class org id
+            self.__org_id = next(
+                assignment
+                for assignment in self.get_member_callings_and_classes()["classAssignments"]
+                if assignment["group"] == "SUNDAY_GENDER"
+            )["classId"]
+
         return self.__get_JSON(
             self.__endpoint("suborganization", org_id=org_id, unit=unit)
         )[0]

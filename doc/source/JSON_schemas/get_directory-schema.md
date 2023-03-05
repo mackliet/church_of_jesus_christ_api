@@ -9,8 +9,6 @@
     familyName: str,
     members: [
       {
-        ageGroup: str,
-        birthDate: str,
         classes: [
           str
         ],
@@ -21,27 +19,21 @@
         head: bool,
         householdUuid: str,
         individualId: int,
-        member: bool,
-        ordinances: [
-          {
-            type: str
-          }
-        ],
         permissions: [
           str
         ],
         phone: str,
+        positions: [
+          {
+            name: str,
+            setApart: bool,
+            type: str,
+            unitName: str,
+            unitNumber: int,
+            uuid: str
+          }
+        ],
         preferredName: str,
-        priesthood: str,
-        priorUnitMoveOutDate: str,
-        privacy: {
-          email: str,
-          master: str,
-          phone: str,
-          photo: str
-        },
-        sex: str,
-        unitMoveInDate: str,
         uuid: str
       }
     ],
@@ -49,13 +41,6 @@
       str
     ],
     phone: str,
-    privacy: {
-      address: str,
-      coordinates: str,
-      master: str,
-      phone: str,
-      photo: str
-    },
     unitNumber: int,
     uuid: str,
     verified: bool

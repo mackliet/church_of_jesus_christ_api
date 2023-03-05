@@ -1,8 +1,14 @@
 {
-  accessDenied: bool,
-  error: str,
-  message: str,
-  path: str,
-  status: int,
-  timestamp: str
+  keyIndicators: [
+    {
+      actual: int,
+      calculationDescription: NoneType,
+      description: str,
+      goal: int,
+      id: int,
+      name: str
+    }
+  ],
+  reportEnd: str,
+  reportStart: str
 }
