@@ -187,7 +187,7 @@ class ChurchOfJesusChristAPI(object):
                 "{unit}", default_if_none(unit, self.__user_details["homeUnits"][0])
             )
             endpoint = endpoint.replace(
-                "{parent_unit}", default_if_none(unit, self.__user_details["parentUnits"][0])
+                "{parent_unit}", default_if_none(parent_unit, self.__user_details["parentUnits"][0])
             )
             endpoint = endpoint.replace(
                 "{member_id}",
@@ -198,7 +198,7 @@ class ChurchOfJesusChristAPI(object):
             )
         if self.__org_id:
             endpoint = endpoint.replace(
-                "{org_id}", default_if_none(uuid, self.__org_id)
+                "{org_id}", default_if_none(org_id, self.__org_id)
             )
         return endpoint
 
