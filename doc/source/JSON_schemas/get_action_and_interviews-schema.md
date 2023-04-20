@@ -24,7 +24,7 @@
         gender: str,
         genderCode: int,
         genderLabelShort: str,
-        householdEmail: str,
+        householdEmail: NoneType,
         householdPhone: str,
         id: int,
         interviewComplete: bool,

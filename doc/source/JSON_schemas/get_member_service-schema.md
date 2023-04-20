@@ -168,8 +168,8 @@
     headInUnit: bool,
     hohId: int,
     hohName: str,
-    householdEmail: str,
-    householdPhone: str,
+    householdEmail: NoneType,
+    householdPhone: NoneType,
     hqMoveRestriction: bool,
     id: int,
     legalNameGroup: {
@@ -279,6 +279,7 @@
     templeRecStatuses: NoneType,
     unitName: str,
     unitNumber: str,
+    unsubscribedFromEmail: bool,
     updateRequests: NoneType,
     warnings: {}
   },

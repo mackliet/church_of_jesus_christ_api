@@ -19,8 +19,8 @@
     nameOrder: int,
     phone: str,
     priesthood: NoneType,
-    priorUnitName: NoneType,
-    priorUnitNumber: NoneType,
+    priorUnitName: str,
+    priorUnitNumber: str,
     textAddress: str,
     unitName: str
   }

@@ -9,7 +9,7 @@
     birthDateSort: str,
     birthDayFormatted: str,
     birthDaySort: str,
-    email: str,
+    email: NoneType,
     formattedMrn: NoneType,
     gender: str,
     genderCode: int,

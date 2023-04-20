@@ -28,7 +28,7 @@ password = (
     else getpass.getpass("password: ")
 )
 
-api = ChurchOfJesusChristAPI(username, password, True)
+api = ChurchOfJesusChristAPI(username, password)
 
 
 def convert_JSON_to_simple_example(json_node, converter_func):

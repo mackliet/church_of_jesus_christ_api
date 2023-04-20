@@ -17,13 +17,6 @@
             {
               assignType: str,
               email: str,
-              interviews: [
-                {
-                  date: str,
-                  id: str,
-                  timestamp: str
-                }
-              ],
               legacyCmisId: int,
               name: str,
               nameOrder: int,

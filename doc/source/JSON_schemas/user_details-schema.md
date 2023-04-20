@@ -1,28 +1,20 @@
 {
   authorized: bool,
-  country: str,
-  developer: bool,
   homeUnits: [
     int
   ],
+  households: [
+    str
+  ],
   individualId: int,
-  ldsAccountId: int,
-  member: bool,
-  mrn: str,
+  live: bool,
   parentUnits: [
     int
   ],
   preferredLanguage: str,
   preferredName: str,
-  proxyEdit: bool,
   proxyUnit: bool,
   proxyUser: bool,
-  templeNearest: [
-    int
-  ],
-  templeUnits: [
-    int
-  ],
   username: str,
   uuid: str
 }

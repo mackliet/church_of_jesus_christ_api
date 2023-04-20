@@ -27,7 +27,7 @@
           street2: NoneType,
           units: NoneType
         },
-        contactMobilePhone: NoneType,
+        contactMobilePhone: str,
         contactWorkPhone: NoneType,
         custom: bool,
         customNameChanged: bool,

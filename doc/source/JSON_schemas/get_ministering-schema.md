@@ -16,7 +16,16 @@
           youthBasedOnAge: bool
         }
       ],
-      ministeringSisters: list,
+      ministeringSisters: [
+        {
+          age: int,
+          legacyCmisId: int,
+          name: str,
+          nameOrder: int,
+          personUuid: str,
+          youthBasedOnAge: bool
+        }
+      ],
       unitName: str,
       unitNumber: int
     }

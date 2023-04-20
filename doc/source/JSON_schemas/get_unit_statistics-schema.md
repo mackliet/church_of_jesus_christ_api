@@ -2,9 +2,7 @@
   adultFemaleRecentConverts: int,
   adultFemaleRecentConvertsIndividualIds: list,
   adultMaleRecentConverts: int,
-  adultMaleRecentConvertsIndividualIds: [
-    int
-  ],
+  adultMaleRecentConvertsIndividualIds: list,
   adults: int,
   adultsIndividualIds: [
     int
@@ -90,9 +88,7 @@
     int
   ],
   ordainedRecentConverts: int,
-  ordainedRecentConvertsIndividualIds: [
-    int
-  ],
+  ordainedRecentConvertsIndividualIds: list,
   priests: int,
   priestsIndividualIds: [
     int
@@ -103,12 +99,8 @@
   ],
   recentConverts: int,
   recentConvertsEligibleForOrdination: int,
-  recentConvertsEligibleForOrdinationIndividualIds: [
-    int
-  ],
-  recentConvertsIndividualIds: [
-    int
-  ],
+  recentConvertsEligibleForOrdinationIndividualIds: list,
+  recentConvertsIndividualIds: list,
   shortUnitName: NoneType,
   singleAdults: int,
   singleAdultsIndividualIds: [

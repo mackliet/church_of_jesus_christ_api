@@ -8,11 +8,14 @@
       formatted2: NoneType,
       formatted3: NoneType,
       formatted4: NoneType,
+      formatted5: NoneType,
+      formatted6: NoneType,
       formattedAll: list,
       formattedLine1: str,
       formattedLine2: str,
       formattedLine3: NoneType,
-      formattedLine4: NoneType
+      formattedLine4: NoneType,
+      useType: NoneType
     },
     age: int,
     birth: {
@@ -52,11 +55,14 @@
           formatted2: NoneType,
           formatted3: NoneType,
           formatted4: NoneType,
+          formatted5: NoneType,
+          formatted6: NoneType,
           formattedAll: list,
           formattedLine1: str,
           formattedLine2: str,
           formattedLine3: NoneType,
-          formattedLine4: NoneType
+          formattedLine4: NoneType,
+          useType: NoneType
         },
         anchorPerson: {
           legacyCmisId: int,
@@ -67,6 +73,7 @@
         familyNameLocal: str,
         phones: [
           {
+            internationalFormat: NoneType,
             number: str,
             ownerType: NoneType,
             useType: NoneType
@@ -77,6 +84,7 @@
           adminUnit: NoneType,
           cdolLink: NoneType,
           children: NoneType,
+          nameLatin: NoneType,
           nameLocal: str,
           parentUnit: NoneType,
           positions: NoneType,
@@ -106,8 +114,10 @@
     legacyCmisId: int,
     member: bool,
     membershipUnit: NoneType,
+    mrn: NoneType,
     nameFamilyPreferredLocal: str,
     nameFormats: {
+      certificateChurchOfficerLocal: NoneType,
       familyPreferredLocal: str,
       givenPreferredLocal: str,
       listOfficial: NoneType,
@@ -133,6 +143,7 @@
     phoneNumber: str,
     phones: [
       {
+        internationalFormat: NoneType,
         number: str,
         ownerType: NoneType,
         useType: NoneType
@@ -148,6 +159,7 @@
       str
     ],
     uuid: str,
+    wamPolicy: NoneType,
     youthBasedOnAge: bool
   }
 ]
