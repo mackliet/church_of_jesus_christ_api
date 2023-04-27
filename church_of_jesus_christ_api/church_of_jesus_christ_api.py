@@ -67,6 +67,8 @@ _endpoints = {
     + "/services/report/progress-record/{unit}/teaching-pool",
     "missionary-indicators": _host("lcr")
     + "/services/report/progress-record/{unit}/key-indicators",
+    "mobile-sync": _host("membertools-api")
+    + "/api/v4/sync?units={unit}&force=true",
     "moved-in": _host("lcr") + "/services/report/members-moved-in/unit/{unit}/36",
     "moved-out": _host("lcr") + "/services/report/members-moved-out/unit/{unit}/12",
     "new-member": _host("lcr") + "/services/report/new-member/unit/{unit}/12",
@@ -319,6 +321,23 @@ class ChurchOfJesusChristAPI(object):
         """
 
         return self.__get_JSON(self.__endpoint("birthdays", unit=unit))
+    
+    def get_mobile_sync_data(self, unit: int = None) -> JSONType:
+        """
+        Returns data that can be found in the Member Tools app. This is the endpoint
+        used by the app when an update is requested.
+
+        Parameters
+
+        unit : int
+            Number of the church unit for which to retrieve the report
+
+        Returns
+
+        .. literalinclude:: ../JSON_schemas/get_mobile_sync_data-schema.md
+        """
+
+        return self.__get_JSON(self.__endpoint("mobile-sync", unit=unit))
 
     def get_directory(self, unit: int = None) -> JSONType:
         """
