@@ -681,7 +681,7 @@ class ChurchOfJesusChristAPI(object):
             for year, quarter in get_quarters()
         }
 
-    def get_unit_orginizations(self, unit: int = None) -> JSONType:
+    def get_unit_organizations(self, unit: int = None) -> JSONType:
         """
         Returns the unit calling/leadership organization structure
 
@@ -692,7 +692,7 @@ class ChurchOfJesusChristAPI(object):
 
         Returns
 
-        .. literalinclude:: ../JSON_schemas/get_unit_orginizations-schema.md
+        .. literalinclude:: ../JSON_schemas/get_unit_organizations-schema.md
         """
 
         return self.__get_JSON(self.__endpoint("unit-organizations", unit=unit))

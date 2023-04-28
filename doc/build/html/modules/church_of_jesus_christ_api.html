@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.2.1 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.2.3 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -259,11 +259,11 @@ unit : int</p>
     <span class="n">visitorCategories</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="n">countsByDate</span><span class="p">:</span> <span class="p">{</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">26</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">02</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">09</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">16</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">:</span> <span class="nb">int</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span><span class="p">:</span> <span class="nb">int</span>
         <span class="p">},</span>
         <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
@@ -325,7 +325,6 @@ unit : int</p>
     <span class="n">visitorCategories</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="n">countsByDate</span><span class="p">:</span> <span class="p">{</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">24</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">01</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">08</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">15</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -377,7 +376,8 @@ unit : int</p>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">02</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">09</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">16</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">:</span> <span class="nb">int</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span><span class="p">:</span> <span class="nb">int</span>
         <span class="p">},</span>
         <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
@@ -2103,11 +2103,13 @@ used by the app when an update is requested.</p>
     <span class="p">{</span>
       <span class="n">childUnits</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
+          <span class="n">countryId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
           <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
         <span class="p">}</span>
       <span class="p">],</span>
+      <span class="n">countryId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
       <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
@@ -3442,8 +3444,8 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 </dd></dl>
 
 <dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_orginizations">
-<code class="descname">get_unit_orginizations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_orginizations" title="Permalink to this definition">¶</a></dt>
+<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_organizations">
+<code class="descname">get_unit_organizations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_organizations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the unit calling/leadership organization structure</p>
 <p>Parameters</p>
 <dl class="simple">

@@ -35,11 +35,11 @@
     visitorCategories: [
       {
         countsByDate: {
-          2023-03-26: int,
           2023-04-02: int,
           2023-04-09: int,
           2023-04-16: int,
-          2023-04-23: int
+          2023-04-23: int,
+          2023-04-30: int
         },
         displayName: str,
         name: str
