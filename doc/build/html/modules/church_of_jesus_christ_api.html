@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.2.3 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.2.4 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -259,11 +259,11 @@ unit : int</p>
     <span class="n">visitorCategories</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="n">countsByDate</span><span class="p">:</span> <span class="p">{</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">02</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">09</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">16</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span><span class="p">:</span> <span class="nb">int</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">07</span><span class="p">:</span> <span class="nb">int</span>
         <span class="p">},</span>
         <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
@@ -325,7 +325,6 @@ unit : int</p>
     <span class="n">visitorCategories</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="n">countsByDate</span><span class="p">:</span> <span class="p">{</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">01</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">08</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">15</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">22</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -377,7 +376,8 @@ unit : int</p>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">09</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">16</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span><span class="p">:</span> <span class="nb">int</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">07</span><span class="p">:</span> <span class="nb">int</span>
         <span class="p">},</span>
         <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
@@ -464,51 +464,43 @@ unit : int</p>
   <span class="p">{</span>
     <span class="n">address</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">coordinates</span><span class="p">:</span> <span class="p">{</span>
-      <span class="n">latitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
-      <span class="n">longitude</span><span class="p">:</span> <span class="nb">float</span>
+      <span class="n">lat</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+      <span class="n">long</span><span class="p">:</span> <span class="nb">float</span>
     <span class="p">},</span>
-    <span class="n">editable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">familyName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">members</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">editable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
         <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">familyName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">givenName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">head</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
         <span class="n">householdUuid</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">individualId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">permissions</span><span class="p">:</span> <span class="p">[</span>
+          <span class="nb">str</span>
+        <span class="p">],</span>
         <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">positions</span><span class="p">:</span> <span class="p">[</span>
           <span class="p">{</span>
-            <span class="n">positionTypeId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-            <span class="n">positionTypeName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+            <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+            <span class="n">setApart</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
             <span class="n">unitName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
             <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
             <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
           <span class="p">}</span>
         <span class="p">],</span>
-        <span class="n">privacy</span><span class="p">:</span> <span class="p">{</span>
-          <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-          <span class="n">master</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-          <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-          <span class="n">photo</span><span class="p">:</span> <span class="nb">str</span>
-        <span class="p">},</span>
-        <span class="n">surname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">preferredName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
       <span class="p">}</span>
     <span class="p">],</span>
-    <span class="n">movable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">permissions</span><span class="p">:</span> <span class="p">[</span>
+      <span class="nb">str</span>
+    <span class="p">],</span>
     <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-    <span class="n">privacy</span><span class="p">:</span> <span class="p">{</span>
-      <span class="n">address</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-      <span class="n">coordinates</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-      <span class="n">master</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-      <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-      <span class="n">photo</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="p">},</span>
-    <span class="n">surname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">verified</span><span class="p">:</span> <span class="nb">bool</span>
@@ -3807,11 +3799,13 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="n">childUnits</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
+      <span class="n">countryId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
       <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
     <span class="p">}</span>
   <span class="p">],</span>
+  <span class="n">countryId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
   <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
   <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
   <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
@@ -3838,21 +3832,32 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 <p>Returns</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="n">authorized</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+  <span class="n">country</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+  <span class="n">developer</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
   <span class="n">homeUnits</span><span class="p">:</span> <span class="p">[</span>
     <span class="nb">int</span>
   <span class="p">],</span>
-  <span class="n">households</span><span class="p">:</span> <span class="p">[</span>
-    <span class="nb">str</span>
-  <span class="p">],</span>
   <span class="n">individualId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-  <span class="n">live</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+  <span class="n">ldsAccountId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">leaderParentUnits</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nb">int</span>
+  <span class="p">],</span>
+  <span class="n">member</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+  <span class="n">mrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
   <span class="n">parentUnits</span><span class="p">:</span> <span class="p">[</span>
     <span class="nb">int</span>
   <span class="p">],</span>
   <span class="n">preferredLanguage</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
   <span class="n">preferredName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+  <span class="n">proxyEdit</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
   <span class="n">proxyUnit</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
   <span class="n">proxyUser</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+  <span class="n">templeNearest</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nb">int</span>
+  <span class="p">],</span>
+  <span class="n">templeUnits</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nb">int</span>
+  <span class="p">],</span>
   <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
   <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">}</span>

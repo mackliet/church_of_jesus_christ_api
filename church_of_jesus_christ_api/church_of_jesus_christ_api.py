@@ -46,7 +46,7 @@ _endpoints = {
     + "/services/report/family-history/activity?unitNumber={unit}",
     "full-time-missionaries": _host("lcr")
     + "/services/orgs/full-time-missionaries?unitNumber={unit}",
-    "households" : _host("directory")
+    "households" : _host("membertools-api")
     + "/api/v4/households?unit={unit}",
     "key-indicators": _host("lcr")
     + "/services/report/key-indicator/unit/{unit}/8?extended=true&unitNumber={unit}",
@@ -89,9 +89,9 @@ _endpoints = {
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}&subOrgId={org_id}",
     "unit-organizations": _host("lcr")
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}",
-    "units": _host("directory")
+    "units": _host("membertools-api")
     + "/api/v4/units/{parent_unit}",
-    "user": _host("directory") + "/api/v4/user",
+    "user": _host("membertools-api") + "/api/v4/user",
 }
 
 

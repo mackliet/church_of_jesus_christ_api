@@ -26,7 +26,6 @@
     visitorCategories: [
       {
         countsByDate: {
-          2022-05-01: int,
           2022-05-08: int,
           2022-05-15: int,
           2022-05-22: int,
@@ -78,7 +77,8 @@
           2023-04-09: int,
           2023-04-16: int,
           2023-04-23: int,
-          2023-04-30: int
+          2023-04-30: int,
+          2023-05-07: int
         },
         displayName: str,
         name: str
