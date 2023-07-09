@@ -101,13 +101,15 @@ class ChurchOfJesusChristAPI(object):
     as getting member data, calling information, reports, etc.
     """
 
-    def __init__(self, username: str, password: str, proxies: dict[str, str] = None, verify_SSL: bool = None) -> None:
+    def __init__(self, username: str, password: str, timeoutsec: int = 15, proxies: dict[str, str] = None, verify_SSL: bool = None) -> None:
         """
         Parameters:
         username : str
             username for the Church's website
         password : str
             password for the Church's website
+        temoutsec : int
+            timeout in seconds for all requests
         debug_mode : bool
             Disables SSL verification. Useful for debugging HTTPS with a proxy
         """
@@ -118,10 +120,11 @@ class ChurchOfJesusChristAPI(object):
         self.__session.verify = verify_SSL if verify_SSL is not None else proxies is None
         self.__user_details = None
         self.__org_id = None
+        self.__timeout_sec = timeoutsec
 
         login_resp = self.__session.post(
             _endpoints["authn"],
-            timeout=15,
+            timeout=self.__timeout_sec,
             headers={"Content-Type": "application/json;charset=UTF-8"},
             data=json.dumps({"username":username, "password": password})
         ).json()
@@ -132,7 +135,7 @@ class ChurchOfJesusChristAPI(object):
 
         resp = self.__session.get(
             _endpoints["oauth2-authorize"],
-            timeout=15,
+            timeout=self.__timeout_sec,
             params={"client_id":client_id,
                     "response_type":"code",
                     "scope":"openid profile offline_access cmisid",
@@ -147,7 +150,7 @@ class ChurchOfJesusChristAPI(object):
 
         token_json = self.__session.post(
             _endpoints["oauth2-token"],
-            timeout=15,
+            timeout=self.__timeout_sec,
             headers={"Content-Type":"application/x-www-form-urlencoded"},
             params={"code":code,
                     "client_id":client_id,
@@ -166,7 +169,7 @@ class ChurchOfJesusChristAPI(object):
             ))
 
         # This is necessary to set appSession cookies for a few endpoints
-        self.__session.get(_endpoints["lcr-login"], timeout=15)
+        self.__session.get(_endpoints["lcr-login"], timeout=self.__timeout_sec)
         
         self.__user_details = self.__get_JSON(self.__endpoint("user"))
 
@@ -209,7 +212,7 @@ class ChurchOfJesusChristAPI(object):
             endpoint,
             headers={"Accept": "application/json",
                      "Authorization":f"Bearer {self.__access_token}"},
-            timeout=15
+            timeout=self.__timeout_sec
         )
         assert resp.ok, resp.content
         return resp.json()
@@ -232,6 +235,13 @@ class ChurchOfJesusChristAPI(object):
         """
         return self.__user_details
 
+    @property
+    def timeout_sec(self):
+        """
+        Returns the timeout, in seconds, to use for all requests.
+        """
+        return self.__timeout_sec
+    
     @property
     def org_id(self):
         return self.__org_id
