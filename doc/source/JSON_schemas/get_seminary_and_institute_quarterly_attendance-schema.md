@@ -297,7 +297,7 @@
     }
   },
   2023: {
-    2: {
+    3: {
       isStakeTotals: bool,
       quarter: int,
       sections: [

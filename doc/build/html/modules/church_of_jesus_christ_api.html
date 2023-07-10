@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.2.4 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>church_of_jesus_christ_api package &mdash; Church of Jesus Christ API 0.2.4 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -25,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Church of Jesus Christ API
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Church of Jesus Christ API
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -38,7 +44,45 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">church_of_jesus_christ_api package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-church_of_jesus_christ_api.church_of_jesus_christ_api">church_of_jesus_christ_api.church_of_jesus_christ_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-church_of_jesus_christ_api.church_of_jesus_christ_api">church_of_jesus_christ_api.church_of_jesus_christ_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.convert_date_to_string_using_default_date_if_none"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.convert_date_to_string_using_default_date_if_none()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_action_and_interviews"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_action_and_interviews()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_assigned_missionaries"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_assigned_missionaries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_attendance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance_date_range"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_attendance_date_range()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_birthdays"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_birthdays()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_directory"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_directory()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_family_history_report"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_family_history_report()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_full_time_missionaries"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_full_time_missionaries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_key_indicators"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_key_indicators()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_callings_and_classes"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_member_callings_and_classes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_list"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_member_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_service"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_member_service()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_with_callings"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_members_with_callings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_without_callings"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_members_without_callings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_ministering()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering_full"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_ministering_full()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_indicators"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_missionary_indicators()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_progress_record"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_missionary_progress_record()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_mobile_sync_data"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_mobile_sync_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_in"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_moved_in()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_out"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_moved_out()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_new_members"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_new_members()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_out_of_unit_callings"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_out_of_unit_callings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_quarterly_reports"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_quarterly_reports()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_seminary_and_institute_quarterly_attendance"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_seminary_and_institute_quarterly_attendance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_suborganization"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_suborganization()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_organizations"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_unit_organizations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_statistics"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_unit_statistics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_units"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_units()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.org_id"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.org_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.session"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.session</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.user_details"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.user_details</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#module-church_of_jesus_christ_api">Module contents</a></li>
 </ul>
 </li>
@@ -57,8 +101,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>church_of_jesus_christ_api package</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">church_of_jesus_christ_api package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/modules/church_of_jesus_christ_api.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -69,32 +113,34 @@
            <div itemprop="articleBody">
              
   <section id="church-of-jesus-christ-api-package">
-<h1>church_of_jesus_christ_api package<a class="headerlink" href="#church-of-jesus-christ-api-package" title="Permalink to this headline">¶</a></h1>
+<h1>church_of_jesus_christ_api package<a class="headerlink" href="#church-of-jesus-christ-api-package" title="Permalink to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-church_of_jesus_christ_api.church_of_jesus_christ_api">
-<span id="church-of-jesus-christ-api-church-of-jesus-christ-api-module"></span><h2>church_of_jesus_christ_api.church_of_jesus_christ_api module<a class="headerlink" href="#module-church_of_jesus_christ_api.church_of_jesus_christ_api" title="Permalink to this headline">¶</a></h2>
+<span id="church-of-jesus-christ-api-church-of-jesus-christ-api-module"></span><h2>church_of_jesus_christ_api.church_of_jesus_christ_api module<a class="headerlink" href="#module-church_of_jesus_christ_api.church_of_jesus_christ_api" title="Permalink to this heading"></a></h2>
 <p>The module that implements ChurchOfJesusChristAPI. This module allows the user
 to get data from churchofjesuschrist.org.</p>
-<dl class="class">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI">
-<em class="property">class </em><code class="descclassname">church_of_jesus_christ_api.church_of_jesus_christ_api.</code><code class="descname">ChurchOfJesusChristAPI</code><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">church_of_jesus_christ_api.church_of_jesus_christ_api.</span></span><span class="sig-name descname"><span class="pre">ChurchOfJesusChristAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify_SSL</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class used to interact with features found on churchofjesuschrist.org, such
 as getting member data, calling information, reports, etc.</p>
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.convert_date_to_string_using_default_date_if_none">
-<code class="descname">convert_date_to_string_using_default_date_if_none</code><span class="sig-paren">(</span><em>val</em>, <em>default</em><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.convert_date_to_string_using_default_date_if_none" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.convert_date_to_string_using_default_date_if_none">
+<span class="sig-name descname"><span class="pre">convert_date_to_string_using_default_date_if_none</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.convert_date_to_string_using_default_date_if_none" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_action_and_interviews">
-<code class="descname">get_action_and_interviews</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_action_and_interviews" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_action_and_interviews">
+<span class="sig-name descname"><span class="pre">get_action_and_interviews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_action_and_interviews" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit action and interview list</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -157,15 +203,19 @@ as getting member data, calling information, reports, etc.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_assigned_missionaries">
-<code class="descname">get_assigned_missionaries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_assigned_missionaries" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_assigned_missionaries">
+<span class="sig-name descname"><span class="pre">get_assigned_missionaries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_assigned_missionaries" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of the missionaries currently assigned to serve in the unit</p>
 <p>Parameters
 unit : int</p>
 <blockquote>
 <div><p>Number of the church unit for which to retrieve the report</p>
 </div></blockquote>
+<dl class="simple">
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
+</dd>
+</dl>
 <p>Returns</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
@@ -212,13 +262,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance">
-<code class="descname">get_attendance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance">
+<span class="sig-name descname"><span class="pre">get_attendance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the attendance list for the last 5 weeks</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -259,11 +311,11 @@ unit : int</p>
     <span class="n">visitorCategories</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="n">countsByDate</span><span class="p">:</span> <span class="p">{</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">09</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">16</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">07</span><span class="p">:</span> <span class="nb">int</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">18</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">25</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">02</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">09</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">16</span><span class="p">:</span> <span class="nb">int</span>
         <span class="p">},</span>
         <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
@@ -283,9 +335,9 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance_date_range">
-<code class="descname">get_attendance_date_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance_date_range" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance_date_range">
+<span class="sig-name descname"><span class="pre">get_attendance_date_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime.date</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime.date</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance_date_range" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the attendance list for a given date range (default 1 year ago to today)</p>
 <p>Parameters</p>
 <dl class="simple">
@@ -294,6 +346,8 @@ unit : int</p>
 <dt>end_date: datetime.date</dt><dd><p>The end date after which attendance will no longer be retrieved</p>
 </dd>
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -325,15 +379,6 @@ unit : int</p>
     <span class="n">visitorCategories</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
         <span class="n">countsByDate</span><span class="p">:</span> <span class="p">{</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">08</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">15</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">22</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">29</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">05</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">12</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">19</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">26</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2022</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">03</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">17</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2022</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">24</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -377,7 +422,17 @@ unit : int</p>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">16</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">23</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="mi">2023</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-          <span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">07</span><span class="p">:</span> <span class="nb">int</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">07</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">14</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">21</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">28</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">04</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">11</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">18</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">25</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">02</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">09</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+          <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">16</span><span class="p">:</span> <span class="nb">int</span>
         <span class="p">},</span>
         <span class="n">displayName</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
@@ -390,13 +445,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_birthdays">
-<code class="descname">get_birthdays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_birthdays" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_birthdays">
+<span class="sig-name descname"><span class="pre">get_birthdays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_birthdays" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit birthday list</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -450,13 +507,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_directory">
-<code class="descname">get_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_directory" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_directory">
+<span class="sig-name descname"><span class="pre">get_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_directory" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit directory of households</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -510,13 +569,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_family_history_report">
-<code class="descname">get_family_history_report</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_family_history_report" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_family_history_report">
+<span class="sig-name descname"><span class="pre">get_family_history_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_family_history_report" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit family history report</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -638,15 +699,19 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_full_time_missionaries">
-<code class="descname">get_full_time_missionaries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_full_time_missionaries" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_full_time_missionaries">
+<span class="sig-name descname"><span class="pre">get_full_time_missionaries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_full_time_missionaries" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of the members from the unit currently serving missions</p>
 <p>Parameters
 unit : int</p>
 <blockquote>
 <div><p>Number of the church unit for which to retrieve the report</p>
 </div></blockquote>
+<dl class="simple">
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
+</dd>
+</dl>
 <p>Returns</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
@@ -679,7 +744,7 @@ unit : int</p>
       <span class="n">nonMember</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
       <span class="n">notAccountable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
       <span class="n">outOfUnitMember</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-      <span class="n">phone</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
+      <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
       <span class="n">priesthood</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
       <span class="n">priesthoodCode</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
       <span class="n">priesthoodType</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
@@ -711,13 +776,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_key_indicators">
-<code class="descname">get_key_indicators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_key_indicators" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_key_indicators">
+<span class="sig-name descname"><span class="pre">get_key_indicators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_key_indicators" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit key indicators</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -739,13 +806,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_callings_and_classes">
-<code class="descname">get_member_callings_and_classes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_callings_and_classes" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_callings_and_classes">
+<span class="sig-name descname"><span class="pre">get_member_callings_and_classes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_callings_and_classes" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the callings and class assignments for the given member</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>member_id<span class="classifier">int</span></dt><dd><p>ID of the member for which to retrieve information</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -894,13 +963,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_list">
-<code class="descname">get_member_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_list">
+<span class="sig-name descname"><span class="pre">get_member_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_list" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit member list</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -1073,13 +1144,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_service">
-<code class="descname">get_member_service</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_service" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_service">
+<span class="sig-name descname"><span class="pre">get_member_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_service" title="Permalink to this definition"></a></dt>
 <dd><p>Returns member’s service assignments</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>member_id<span class="classifier">int</span></dt><dd><p>ID of the member for which to retrieve information</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -1498,13 +1571,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_with_callings">
-<code class="descname">get_members_with_callings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_with_callings" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_with_callings">
+<span class="sig-name descname"><span class="pre">get_members_with_callings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_with_callings" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit list of members with callings</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -1557,13 +1632,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_without_callings">
-<code class="descname">get_members_without_callings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_without_callings" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_without_callings">
+<span class="sig-name descname"><span class="pre">get_members_without_callings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_without_callings" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit list of members without callings</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -1608,13 +1685,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering">
-<code class="descname">get_ministering</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering">
+<span class="sig-name descname"><span class="pre">get_ministering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit ministering assignments</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -1685,13 +1764,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering_full">
-<code class="descname">get_ministering_full</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering_full" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering_full">
+<span class="sig-name descname"><span class="pre">get_ministering_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering_full" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit ministering assignments as well as interview information</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -1827,33 +1908,15 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_indicators">
-<code class="descname">get_missionary_indicators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_indicators" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_indicators">
+<span class="sig-name descname"><span class="pre">get_missionary_indicators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_indicators" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit missionary indicators</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
 </dd>
-</dl>
-<p>Returns</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="n">error</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-  <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-  <span class="n">status</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-  <span class="n">timestamp</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_progress_record">
-<code class="descname">get_missionary_progress_record</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_progress_record" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the unit missionary progress record</p>
-<p>Parameters</p>
-<dl class="simple">
-<dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -1867,14 +1930,38 @@ unit : int</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_mobile_sync_data">
-<code class="descname">get_mobile_sync_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_mobile_sync_data" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_progress_record">
+<span class="sig-name descname"><span class="pre">get_missionary_progress_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_progress_record" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the unit missionary progress record</p>
+<p>Parameters</p>
+<dl class="simple">
+<dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
+</dd>
+</dl>
+<p>Returns</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="n">error</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+  <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+  <span class="n">status</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="n">timestamp</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_mobile_sync_data">
+<span class="sig-name descname"><span class="pre">get_mobile_sync_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_mobile_sync_data" title="Permalink to this definition"></a></dt>
 <dd><p>Returns data that can be found in the Member Tools app. This is the endpoint
 used by the app when an update is requested.</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -2095,13 +2182,11 @@ used by the app when an update is requested.</p>
     <span class="p">{</span>
       <span class="n">childUnits</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-          <span class="n">countryId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
           <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
           <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
         <span class="p">}</span>
       <span class="p">],</span>
-      <span class="n">countryId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
       <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
@@ -2144,13 +2229,15 @@ used by the app when an update is requested.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_in">
-<code class="descname">get_moved_in</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_in" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_in">
+<span class="sig-name descname"><span class="pre">get_moved_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_in" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit list of recently moved in members</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -2185,13 +2272,15 @@ used by the app when an update is requested.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_out">
-<code class="descname">get_moved_out</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_out" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_out">
+<span class="sig-name descname"><span class="pre">get_moved_out</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_out" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit list of recently moved out members</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -2213,13 +2302,15 @@ used by the app when an update is requested.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_new_members">
-<code class="descname">get_new_members</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_new_members" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_new_members">
+<span class="sig-name descname"><span class="pre">get_new_members</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_new_members" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit list of new members (recent converts)</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -2228,13 +2319,15 @@ used by the app when an update is requested.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_out_of_unit_callings">
-<code class="descname">get_out_of_unit_callings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_out_of_unit_callings" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_out_of_unit_callings">
+<span class="sig-name descname"><span class="pre">get_out_of_unit_callings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_out_of_unit_callings" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit list of members with callings out of unit</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -2290,13 +2383,15 @@ used by the app when an update is requested.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_quarterly_reports">
-<code class="descname">get_quarterly_reports</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_quarterly_reports" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_quarterly_reports">
+<span class="sig-name descname"><span class="pre">get_quarterly_reports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_quarterly_reports" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all available unit quarterly reports</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -2756,7 +2851,7 @@ used by the app when an update is requested.</p>
     <span class="p">}</span>
   <span class="p">},</span>
   <span class="mi">2023</span><span class="p">:</span> <span class="p">{</span>
-    <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
       <span class="n">childUnits</span><span class="p">:</span> <span class="n">NoneType</span><span class="p">,</span>
       <span class="n">converts</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
       <span class="n">dueDate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -2806,13 +2901,15 @@ used by the app when an update is requested.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_seminary_and_institute_quarterly_attendance">
-<code class="descname">get_seminary_and_institute_quarterly_attendance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_seminary_and_institute_quarterly_attendance" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_seminary_and_institute_quarterly_attendance">
+<span class="sig-name descname"><span class="pre">get_seminary_and_institute_quarterly_attendance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_seminary_and_institute_quarterly_attendance" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all availabe seminary/institute quarterly attendance reports</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -3115,7 +3212,7 @@ used by the app when an update is requested.</p>
     <span class="p">}</span>
   <span class="p">},</span>
   <span class="mi">2023</span><span class="p">:</span> <span class="p">{</span>
-    <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="p">{</span>
       <span class="n">isStakeTotals</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
       <span class="n">quarter</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">sections</span><span class="p">:</span> <span class="p">[</span>
@@ -3152,9 +3249,9 @@ used by the app when an update is requested.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_suborganization">
-<code class="descname">get_suborganization</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_suborganization" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_suborganization">
+<span class="sig-name descname"><span class="pre">get_suborganization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_suborganization" title="Permalink to this definition"></a></dt>
 <dd><p>Returns information for a given suborganization of a unit</p>
 <p>Parameters
 org_id : int</p>
@@ -3164,6 +3261,8 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 </div></blockquote>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -3435,13 +3534,15 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_organizations">
-<code class="descname">get_unit_organizations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_organizations" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_organizations">
+<span class="sig-name descname"><span class="pre">get_unit_organizations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_organizations" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit calling/leadership organization structure</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -3618,13 +3719,15 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_statistics">
-<code class="descname">get_unit_statistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_statistics" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_statistics">
+<span class="sig-name descname"><span class="pre">get_unit_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_statistics" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the unit statistics</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve the report</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
@@ -3786,26 +3889,26 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_units">
-<code class="descname">get_units</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_units" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_units">
+<span class="sig-name descname"><span class="pre">get_units</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent_unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">JSONType</span></span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_units" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of child units for the given parent unit</p>
 <p>Parameters</p>
 <dl class="simple">
 <dt>parent_unit<span class="classifier">int</span></dt><dd><p>Number of the church unit for which to retrieve a list of child units</p>
+</dd>
+<dt>timeout_sec<span class="classifier">int</span></dt><dd><p>Number of seconds to wait for a response when making a request</p>
 </dd>
 </dl>
 <p>Returns</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="n">childUnits</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="n">countryId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
       <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
       <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
     <span class="p">}</span>
   <span class="p">],</span>
-  <span class="n">countryId</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
   <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
   <span class="n">unitNumber</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
   <span class="n">unitType</span><span class="p">:</span> <span class="nb">str</span>
@@ -3814,20 +3917,20 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 </div>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.org_id">
-<code class="descname">org_id</code><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.org_id" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.org_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">org_id</span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.org_id" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.session">
-<code class="descname">session</code><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.session" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.session">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">session</span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.session" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the requests session being used by the API.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.user_details">
-<code class="descname">user_details</code><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.user_details" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.user_details">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">user_details</span></span><a class="headerlink" href="#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.user_details" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the details of the user logged into this session</p>
 <p>Returns</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -3869,7 +3972,7 @@ to the class assignment for gendered class (Elders’ Quorum, Relief Society, et
 
 </section>
 <section id="module-church_of_jesus_christ_api">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-church_of_jesus_christ_api" title="Permalink to this headline">¶</a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-church_of_jesus_christ_api" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 

@@ -29,7 +29,7 @@
       nonMember: bool,
       notAccountable: bool,
       outOfUnitMember: bool,
-      phone: NoneType,
+      phone: str,
       priesthood: NoneType,
       priesthoodCode: NoneType,
       priesthoodType: NoneType,
