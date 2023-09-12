@@ -15,7 +15,9 @@
   ],
   children: int,
   childrenAge8to11RecentConverts: int,
-  childrenAge8to11RecentConvertsIndividualIds: list,
+  childrenAge8to11RecentConvertsIndividualIds: [
+    int
+  ],
   childrenIndividualIds: [
     int
   ],
@@ -28,11 +30,17 @@
     int
   ],
   endowedAdults: int,
-  endowedAdultsIndividualIds: list,
+  endowedAdultsIndividualIds: [
+    int
+  ],
   endowedWithRecommend: int,
-  endowedWithRecommendIndividualIds: list,
+  endowedWithRecommendIndividualIds: [
+    int
+  ],
   endowedWithoutRecommend: int,
-  endowedWithoutRecommendIndividualIds: list,
+  endowedWithoutRecommendIndividualIds: [
+    int
+  ],
   highPriests: int,
   highPriestsIndividualIds: [
     int
@@ -88,7 +96,9 @@
     int
   ],
   ordainedRecentConverts: int,
-  ordainedRecentConvertsIndividualIds: list,
+  ordainedRecentConvertsIndividualIds: [
+    int
+  ],
   priests: int,
   priestsIndividualIds: [
     int
@@ -99,8 +109,12 @@
   ],
   recentConverts: int,
   recentConvertsEligibleForOrdination: int,
-  recentConvertsEligibleForOrdinationIndividualIds: list,
-  recentConvertsIndividualIds: list,
+  recentConvertsEligibleForOrdinationIndividualIds: [
+    int
+  ],
+  recentConvertsIndividualIds: [
+    int
+  ],
   shortUnitName: NoneType,
   singleAdults: int,
   singleAdultsIndividualIds: [
@@ -128,7 +142,9 @@
     int
   ],
   youngMenRecentConverts: int,
-  youngMenRecentConvertsIndividualIds: list,
+  youngMenRecentConvertsIndividualIds: [
+    int
+  ],
   youngSingleAdults: int,
   youngSingleAdultsIndividualIds: [
     int

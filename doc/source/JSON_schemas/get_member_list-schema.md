@@ -44,7 +44,7 @@
     formattedAddress: str,
     houseHoldMemberNameForList: str,
     householdAnchorPersonUuid: str,
-    householdEmail: NoneType,
+    householdEmail: str,
     householdMember: {
       household: {
         address: {
@@ -69,7 +69,13 @@
           uuid: str
         },
         directoryPreferredLocal: str,
-        emails: NoneType,
+        emails: [
+          {
+            email: str,
+            ownerType: NoneType,
+            useType: NoneType
+          }
+        ],
         familyNameLocal: str,
         phones: [
           {
@@ -140,15 +146,8 @@
       youngSingleAdult: bool
     },
     personUuid: str,
-    phoneNumber: str,
-    phones: [
-      {
-        internationalFormat: NoneType,
-        number: str,
-        ownerType: NoneType,
-        useType: NoneType
-      }
-    ],
+    phoneNumber: NoneType,
+    phones: NoneType,
     positions: NoneType,
     priesthoodOffice: str,
     priesthoodTeacherOrAbove: bool,
