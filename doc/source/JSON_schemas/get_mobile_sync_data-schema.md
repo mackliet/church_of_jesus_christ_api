@@ -20,6 +20,32 @@
       ]
     }
   ],
+  finances: [
+    {
+      accounts: [
+        {
+          categories: [
+            {
+              id: int,
+              name: str,
+              permissions: [
+                str
+              ],
+              type: str
+            }
+          ],
+          countryIso: str,
+          currencyIso: str,
+          id: int,
+          name: str,
+          permissions: [
+            str
+          ]
+        }
+      ],
+      unitNumber: int
+    }
+  ],
   households: [
     {
       address: str,
@@ -28,31 +54,62 @@
         long: float
       },
       displayName: str,
+      email: str,
       familyName: str,
       members: [
         {
           ageGroup: str,
+          bic: bool,
+          birthCountry: str,
           birthDate: str,
+          birthPlace: str,
           classes: [
             str
           ],
           displayName: str,
           email: str,
           familyName: str,
+          father: {
+            birthDate: str,
+            displayName: str,
+            uuid: str
+          },
           givenName: str,
           head: bool,
           householdUuid: str,
           individualId: int,
+          marriage: {
+            country: str,
+            date: str,
+            place: str,
+            sealingDate: str,
+            spouse: {
+              birthDate: str,
+              displayName: str,
+              uuid: str
+            },
+            temple: str
+          },
           member: bool,
+          missionCountry: str,
+          missionLanguage: str,
+          mother: {
+            birthDate: str,
+            displayName: str,
+            uuid: str
+          },
+          mrn: str,
+          officialName: str,
           ordinances: [
             {
+              date: str,
               type: str
             }
           ],
+          patriarchalBlessing: bool,
           permissions: [
             str
           ],
-          phone: str,
           positions: [
             {
               activeDate: str,
@@ -66,14 +123,21 @@
           ],
           preferredName: str,
           priesthood: str,
+          priorUnit: {
+            name: str,
+            unitNumber: int,
+            unitType: str
+          },
           priorUnitMoveOutDate: str,
           privacy: {
             email: str,
             master: str,
-            phone: str,
             photo: str
           },
           sex: str,
+          templeRecommendExpiration: str,
+          templeRecommendStatus: str,
+          templeRecommendType: str,
           unitMoveInDate: str,
           uuid: str
         }
@@ -85,6 +149,7 @@
       privacy: {
         address: str,
         coordinates: str,
+        email: str,
         master: str,
         phone: str,
         photo: str
@@ -94,6 +159,16 @@
       verified: bool
     }
   ],
+  lists: [
+    {
+      members: [
+        str
+      ],
+      name: str,
+      sort: int,
+      uuid: str
+    }
+  ],
   ministering: [
     {
       assignments: [
@@ -101,15 +176,12 @@
           companions: [
             str
           ],
-          members: [
+          households: [
             str
           ]
         }
       ],
       brothers: [
-        str
-      ],
-      sisters: [
         str
       ],
       uuid: str

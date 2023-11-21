@@ -86,6 +86,8 @@ _endpoints = {
     "statistics": _host("lcr") + "/services/report/unit-statistics?unitNumber={unit}",
     "suborganization": _host("lcr")
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}&subOrgId={org_id}",
+    "temple-recommend-status": _host("lcr")
+    + "/api/temple-recommend/report?unitNumber={unit}",
     "unit-organizations": _host("lcr")
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}",
     "units": _host("membertools-api") + "/api/v4/units/{parent_unit}",
@@ -794,6 +796,28 @@ class ChurchOfJesusChristAPI(object):
             year: {quarter: get_report(year, quarter)}
             for year, quarter in get_quarters()
         }
+
+    def get_temple_recommend_status(
+        self, unit: int = None, timeout_sec: int = None
+    ) -> JSONType:
+        """
+        Returns the temple recommend status
+
+        Parameters
+
+        unit : int
+            Number of the church unit for which to retrieve the report
+        timeout_sec : int
+            Number of seconds to wait for a response when making a request
+
+        Returns
+
+        .. literalinclude:: ../JSON_schemas/get_temple_recommend_status-schema.md
+        """
+
+        return self.__get_JSON(
+            self.__endpoint("temple-recommend-status", unit=unit), timeout_sec
+        )
 
     def get_unit_organizations(
         self, unit: int = None, timeout_sec: int = None
