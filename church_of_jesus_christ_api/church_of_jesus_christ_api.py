@@ -15,7 +15,7 @@ typing.get_type_hints = lambda obj, *unused: obj
 import datetime
 import json
 import requests
-from typing import List, Dict, Any, Union
+from typing import List, Dict, Any, Union, Optional
 
 JSONType = Union[Dict[str, Any], List[Any]]
 
@@ -54,6 +54,7 @@ _endpoints = {
     "member-callings-classes": _host("lcr")
     + "/api/records/member-profile/callings-and-classes/{member_id}",
     "member-list": _host("lcr") + "/services/umlu/report/member-list?unitNumber={unit}",
+    "member-photo": _host("membertools-api") + "/api/v4/photos/members/{uuid}",
     "member-service": _host("lcr") + "/api/records/member-profile/service/{member_id}",
     "members-with-callings": _host("lcr")
     + "/services/report/members-with-callings?unitNumber={unit}",
@@ -219,6 +220,18 @@ class ChurchOfJesusChristAPI(object):
                 "{org_id}", default_if_none(org_id, self.__org_id)
             )
         return endpoint
+    
+    def __get_JPEG(self, endpoint: str, timeout_sec: int) -> Optional[bytes]:
+        resp = self.__session.get(
+            endpoint,
+            headers={
+                "Accept": "image/jpeg",
+                "Authorization": f"Bearer {self.__access_token}",
+            },
+            timeout=timeout_sec or self.__timeout_sec,
+        )
+        assert resp.ok
+        return None if not resp.content else resp.content
 
     def __get_JSON(self, endpoint: str, timeout_sec: int) -> JSONType:
         resp = self.__session.get(
@@ -494,6 +507,25 @@ class ChurchOfJesusChristAPI(object):
         """
 
         return self.__get_JSON(self.__endpoint("member-list", unit=unit), timeout_sec)
+    
+    def download_member_photo(self, uuid: str = None, timeout_sec: int = None) -> Optional[bytes]:
+        """
+        Returns the raw bytes for a member's photo in JPEG format
+
+        Parameters
+
+        uuid: str
+            The given member's uuid
+        timeout_sec : int
+            Number of seconds to wait for a response when making a request
+
+        Returns
+
+        The raw bytes for the member's photo, if available. None if no photo is available,
+        throws an exception if an error occurs
+        """
+
+        return self.__get_JPEG(self.__endpoint("member-photo", uuid=uuid), timeout_sec)
 
     def get_member_service(
         self, member_id: int = None, timeout_sec: int = None
