@@ -63,7 +63,7 @@ _endpoints = {
     "ministering": _host("lcr")
     + "/services/umlu/v1/ministering-assignments/ministering-assignments-report?unitNumber={unit}",
     "ministering-full": _host("lcr")
-    + "/services/umlu/v1/ministering/data-full?unitNumber={unit}",
+    + "/services/umlu/v1/ministering/data-full?type=ALL&unitNumber={unit}",
     "missionary-progress-record": _host("lcr")
     + "/services/report/progress-record/{unit}/teaching-pool",
     "missionary-indicators": _host("lcr")
