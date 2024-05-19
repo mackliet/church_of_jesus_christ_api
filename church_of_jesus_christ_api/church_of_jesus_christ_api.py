@@ -5,13 +5,9 @@ to get data from churchofjesuschrist.org.
 # This makes JSONType show up as JSONType in the documentation instead of
 # showing the aliased type
 from __future__ import annotations
-import typing
 import uuid
 from urllib.parse import urlparse, parse_qs
 import codecs
-
-typing.get_type_hints = lambda obj, *unused: obj
-
 import datetime
 import json
 import requests
@@ -89,6 +85,8 @@ _endpoints = {
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}&subOrgId={org_id}",
     "temple-recommend-status": _host("lcr")
     + "/api/temple-recommend/report?unitNumber={unit}",
+    "unit-groups": _host("lcr")
+    + "/api/leader-messaging/get-unit-groups",
     "unit-organizations": _host("lcr")
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}",
     "units": _host("membertools-api") + "/api/v4/units/{parent_unit}",
@@ -965,3 +963,23 @@ class ChurchOfJesusChristAPI(object):
         """
 
         return self.__get_JSON(self.__endpoint("statistics", unit=unit), timeout_sec)
+
+    def get_unit_groups(
+            self, timeout_sec: int = None
+        ) -> JSONType:
+            """
+            Returns the unit groups, as used by the email/message application
+
+            Parameters
+
+            timeout_sec : int
+                Number of seconds to wait for a response when making a request
+
+            Returns
+
+            .. literalinclude:: ../JSON_schemas/get_unit_groups-schema.md
+            """
+
+            return self.__get_JSON(
+                self.__endpoint("unit-groups"), timeout_sec
+            )
