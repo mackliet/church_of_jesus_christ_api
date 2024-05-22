@@ -5,13 +5,9 @@ to get data from churchofjesuschrist.org.
 # This makes JSONType show up as JSONType in the documentation instead of
 # showing the aliased type
 from __future__ import annotations
-import typing
 import uuid
 from urllib.parse import urlparse, parse_qs
 import codecs
-
-typing.get_type_hints = lambda obj, *unused: obj
-
 import datetime
 import json
 import requests
@@ -47,6 +43,8 @@ _endpoints = {
     + "/services/report/family-history/activity?unitNumber={unit}",
     "full-time-missionaries": _host("lcr")
     + "/services/orgs/full-time-missionaries?unitNumber={unit}",
+    "group-members": _host("lcr")
+    + "/api/leader-messaging/get-group-members/{unit}/{org_id}",
     "households": _host("membertools-api") + "/api/v4/households?unit={unit}",
     "key-indicators": _host("lcr")
     + "/services/report/key-indicator/unit/{unit}/8?extended=true&unitNumber={unit}",
@@ -89,6 +87,8 @@ _endpoints = {
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}&subOrgId={org_id}",
     "temple-recommend-status": _host("lcr")
     + "/api/temple-recommend/report?unitNumber={unit}",
+    "unit-groups": _host("lcr")
+    + "/api/leader-messaging/get-unit-groups",
     "unit-organizations": _host("lcr")
     + "/services/orgs/sub-orgs-with-callings?unitNumber={unit}",
     "units": _host("membertools-api") + "/api/v4/units/{parent_unit}",
@@ -185,6 +185,7 @@ class ChurchOfJesusChristAPI(object):
         self.__session.get(_endpoints["lcr-login"], timeout=self.__timeout_sec)
 
         self.__user_details = self.__get_JSON(self.__endpoint("user"), timeout_sec)
+        self.__get_default_org_id()
 
     def __endpoint(
         self,
@@ -198,7 +199,7 @@ class ChurchOfJesusChristAPI(object):
         endpoint = _endpoints[name]
 
         def default_if_none(val, default):
-            return str(val if val != None else default)
+            return str(val if val is not None else default)
 
         if self.__user_details:
             endpoint = endpoint.replace(
@@ -244,6 +245,17 @@ class ChurchOfJesusChristAPI(object):
         )
         assert resp.ok, resp.content
         return resp.json()
+
+    def __get_default_org_id(self):
+        if self.__org_id is None:
+            # Set SUNDAY_GENDER class org id
+            self.__org_id = next(
+                assignment
+                for assignment in self.get_member_callings_and_classes()[
+                    "classAssignments"
+                ]
+                if assignment["group"] == "SUNDAY_GENDER"
+            )["classId"]
 
     @property
     def session(self):
@@ -892,16 +904,6 @@ class ChurchOfJesusChristAPI(object):
 
         .. literalinclude:: ../JSON_schemas/get_suborganization-schema.md
         """
-        if org_id is None and self.__org_id is None:
-            # Set SUNDAY_GENDER class org id
-            self.__org_id = next(
-                assignment
-                for assignment in self.get_member_callings_and_classes()[
-                    "classAssignments"
-                ]
-                if assignment["group"] == "SUNDAY_GENDER"
-            )["classId"]
-
         return self.__get_JSON(
             self.__endpoint("suborganization", org_id=org_id, unit=unit), timeout_sec
         )[0]
@@ -965,3 +967,49 @@ class ChurchOfJesusChristAPI(object):
         """
 
         return self.__get_JSON(self.__endpoint("statistics", unit=unit), timeout_sec)
+
+    def get_unit_groups(
+            self, timeout_sec: int = None
+        ) -> JSONType:
+            """
+            Returns the unit groups, as used by the email/message application
+
+            Parameters
+
+            timeout_sec : int
+                Number of seconds to wait for a response when making a request
+
+            Returns
+
+            .. literalinclude:: ../JSON_schemas/get_unit_groups-schema.md
+            """
+
+            return self.__get_JSON(
+                self.__endpoint("unit-groups"), timeout_sec
+            )
+
+    def get_group_members(
+            self, unit: int = None, org_id: int = None, timeout_sec: int = None
+        ) -> JSONType:
+            """
+            Returns the members of a given group, as used by the LCR
+            message/email application
+
+            Parameters
+
+            unit : int
+                Number of the church unit for which to retrieve the report
+            org_id : int
+                Number of the suborganization of the unit for which to retrieve
+                the members list.
+            timeout_sec : int
+                Number of seconds to wait for a response when making a request
+
+            Returns
+
+            .. literalinclude:: ../JSON_schemas/get_group_members-schema.md
+            """
+
+            return self.__get_JSON(
+                self.__endpoint("group-members", unit=unit, org_id=org_id), timeout_sec
+            )
