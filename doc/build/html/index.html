@@ -4,18 +4,18 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Church of Jesus Christ API &mdash; Church of Jesus Christ API 0.2.4 documentation</title>
+  <title>Church of Jesus Christ API &mdash; Church of Jesus Christ API 0.3.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=e259d695"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -70,7 +70,7 @@
            <div itemprop="articleBody">
              
   <section id="church-of-jesus-christ-api">
-<h1>Church of Jesus Christ API<a class="headerlink" href="#church-of-jesus-christ-api" title="Permalink to this heading"></a></h1>
+<h1>Church of Jesus Christ API<a class="headerlink" href="#church-of-jesus-christ-api" title="Link to this heading"></a></h1>
 <p>This Python package implements an unofficial API for accessing data from churchofjesuschrist.org.
 The endpoints are the same ones used by the Church’s website and mobile app, and are therefore
 subject to change in the future.</p>
@@ -81,7 +81,7 @@ is to return information about the current user.</p>
 different unit numbers available to the user.</p>
 </section>
 <section id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h1>
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h1>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">church_of_jesus_christ_api</span> <span class="kn">import</span> <span class="n">ChurchOfJesusChristAPI</span>
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
@@ -137,7 +137,7 @@ different unit numbers available to the user.</p>
 </div>
 </section>
 <section id="modules">
-<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this heading"></a></h1>
+<h1>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules/church_of_jesus_christ_api.html">church_of_jesus_christ_api package</a><ul>
@@ -145,14 +145,17 @@ different unit numbers available to the user.</p>
 <li class="toctree-l2"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#module-church_of_jesus_christ_api.church_of_jesus_christ_api">church_of_jesus_christ_api.church_of_jesus_christ_api module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.convert_date_to_string_using_default_date_if_none"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.convert_date_to_string_using_default_date_if_none()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.download_member_photo"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.download_member_photo()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_action_and_interviews"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_action_and_interviews()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_assigned_missionaries"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_assigned_missionaries()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_attendance()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_attendance_date_range"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_attendance_date_range()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_birthdays"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_birthdays()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_covenant_path_progress"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_covenant_path_progress()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_directory"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_directory()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_family_history_report"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_family_history_report()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_full_time_missionaries"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_full_time_missionaries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_group_members"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_group_members()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_key_indicators"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_key_indicators()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_callings_and_classes"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_member_callings_and_classes()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_member_list"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_member_list()</span></code></a></li>
@@ -161,16 +164,14 @@ different unit numbers available to the user.</p>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_members_without_callings"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_members_without_callings()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_ministering()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_ministering_full"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_ministering_full()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_indicators"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_missionary_indicators()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_missionary_progress_record"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_missionary_progress_record()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_mobile_sync_data"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_mobile_sync_data()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_in"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_moved_in()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_moved_out"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_moved_out()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_new_members"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_new_members()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_out_of_unit_callings"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_out_of_unit_callings()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_quarterly_reports"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_quarterly_reports()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_seminary_and_institute_quarterly_attendance"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_seminary_and_institute_quarterly_attendance()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_suborganization"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_suborganization()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_temple_recommend_status"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_temple_recommend_status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_groups"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_unit_groups()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_organizations"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_unit_organizations()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_unit_statistics"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_unit_statistics()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/church_of_jesus_christ_api.html#church_of_jesus_christ_api.church_of_jesus_christ_api.ChurchOfJesusChristAPI.get_units"><code class="docutils literal notranslate"><span class="pre">ChurchOfJesusChristAPI.get_units()</span></code></a></li>
@@ -188,7 +189,7 @@ different unit numbers available to the user.</p>
 </div>
 </section>
 <section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>

@@ -1,31 +1,84 @@
 {
-  authorized: bool,
-  country: str,
-  developer: bool,
-  homeUnits: [
-    int
+  emails: [
+    {
+      email: str,
+      privacy: str,
+      useType: str
+    }
   ],
-  individualId: int,
-  ldsAccountId: int,
-  leaderParentUnits: [
-    int
+  households: [
+    {
+      household: {
+        addresses: [
+          {
+            postalCode: str
+          }
+        ]
+      }
+    }
   ],
-  member: bool,
-  mrn: str,
-  parentUnits: [
-    int
+  legacyCmisId: str,
+  membershipUnit: {
+    areaUnit: [
+      {
+        unitNumber: str
+      }
+    ],
+    country: {
+      name: str,
+      nameLatin: str,
+      nameLocal: str
+    },
+    nameLocal: str,
+    parentUnit: {
+      nameLocal: str,
+      unitNumber: str,
+      unitType: {
+        id: str,
+        name: str
+      }
+    },
+    templeUnit: [
+      {
+        nameLatin: str,
+        nameLocal: str,
+        unitNumber: str,
+        uuid: str
+      }
+    ],
+    unitNumber: str,
+    unitType: {
+      id: str,
+      name: str
+    },
+    wardClerk: [
+      {
+        person: {
+          emails: [
+            {
+              email: str,
+              privacy: str,
+              useType: str
+            }
+          ]
+        }
+      }
+    ]
+  },
+  nameFormats: {
+    familyPreferred: str,
+    givenPreferred: str,
+    listPreferred: str,
+    mailPreferred: str,
+    spokenPreferred: str
+  },
+  positions: [
+    {
+      positionType: {
+        id: str,
+        name: str
+      }
+    }
   ],
-  preferredLanguage: str,
-  preferredName: str,
-  proxyEdit: bool,
-  proxyUnit: bool,
-  proxyUser: bool,
-  templeNearest: [
-    int
-  ],
-  templeUnits: [
-    int
-  ],
-  username: str,
   uuid: str
 }

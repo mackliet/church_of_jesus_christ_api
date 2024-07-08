@@ -49,7 +49,7 @@
       missionUnitNumber: NoneType,
       missionary: bool,
       missionaryHomeUnitName: NoneType,
-      mrn: str,
+      mrn: NoneType,
       nameVerificationForMrn: NoneType,
       newSubOrgId: NoneType,
       ordainDate: NoneType,
@@ -60,7 +60,7 @@
       otherAllowedSubOrgs: [
         {
           children: list,
-          classGroup: NoneType,
+          classGroup: str,
           defaultOrgTypeIds: [
             int
           ],
@@ -149,7 +149,7 @@
       missionUnitNumber: NoneType,
       missionary: bool,
       missionaryHomeUnitName: NoneType,
-      mrn: str,
+      mrn: NoneType,
       nameVerificationForMrn: NoneType,
       newSubOrgId: NoneType,
       ordainDate: NoneType,
@@ -231,7 +231,7 @@
       orgTypeIds: [
         int
       ],
-      parentName: NoneType,
+      parentName: str,
       subOrgId: int,
       unitNumber: int,
       userCanEditCallings: bool

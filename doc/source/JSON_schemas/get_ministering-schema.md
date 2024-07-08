@@ -9,23 +9,26 @@
       ministeringBrothers: [
         {
           age: int,
-          legacyCmisId: int,
+          assignType: str,
+          interviews: [
+            {
+              date: str,
+              id: str,
+              month: int,
+              timestamp: str,
+              year: int
+            }
+          ],
           name: str,
           nameOrder: int,
+          nameSort: str,
           personUuid: str,
+          priesthoodOffice: str,
+          unitOrgId: str,
           youthBasedOnAge: bool
         }
       ],
-      ministeringSisters: [
-        {
-          age: int,
-          legacyCmisId: int,
-          name: str,
-          nameOrder: int,
-          personUuid: str,
-          youthBasedOnAge: bool
-        }
-      ],
+      ministeringSisters: list,
       unitName: str,
       unitNumber: int
     }

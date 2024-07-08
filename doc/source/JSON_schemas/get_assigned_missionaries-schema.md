@@ -14,8 +14,6 @@
     gender: NoneType,
     genderCode: NoneType,
     genderLabelShort: str,
-    householdEmail: NoneType,
-    householdPhone: NoneType,
     id: int,
     missionOfficeAddress: NoneType,
     missionUnitName: str,

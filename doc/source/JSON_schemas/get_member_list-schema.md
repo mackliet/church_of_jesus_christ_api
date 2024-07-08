@@ -44,7 +44,6 @@
     formattedAddress: str,
     houseHoldMemberNameForList: str,
     householdAnchorPersonUuid: str,
-    householdEmail: str,
     householdMember: {
       household: {
         address: {
@@ -69,22 +68,9 @@
           uuid: str
         },
         directoryPreferredLocal: str,
-        emails: [
-          {
-            email: str,
-            ownerType: NoneType,
-            useType: NoneType
-          }
-        ],
+        emails: NoneType,
         familyNameLocal: str,
-        phones: [
-          {
-            internationalFormat: NoneType,
-            number: str,
-            ownerType: NoneType,
-            useType: NoneType
-          }
-        ],
+        phones: NoneType,
         unit: {
           addressUnknown: NoneType,
           adminUnit: NoneType,
@@ -105,7 +91,6 @@
     },
     householdNameDirectoryLocal: str,
     householdNameFamilyLocal: str,
-    householdPhoneNumber: str,
     householdRole: str,
     householdUuid: str,
     households: NoneType,
@@ -124,6 +109,7 @@
     nameFamilyPreferredLocal: str,
     nameFormats: {
       certificateChurchOfficerLocal: NoneType,
+      certificateOfficialLocal: NoneType,
       familyPreferredLocal: str,
       givenPreferredLocal: str,
       listOfficial: NoneType,
@@ -146,8 +132,15 @@
       youngSingleAdult: bool
     },
     personUuid: str,
-    phoneNumber: NoneType,
-    phones: NoneType,
+    phoneNumber: str,
+    phones: [
+      {
+        internationalFormat: NoneType,
+        number: str,
+        ownerType: NoneType,
+        useType: NoneType
+      }
+    ],
     positions: NoneType,
     priesthoodOffice: str,
     priesthoodTeacherOrAbove: bool,

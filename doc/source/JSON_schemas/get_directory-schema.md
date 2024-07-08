@@ -2,109 +2,46 @@
   {
     address: str,
     coordinates: {
-      lat: float,
-      long: float
+      latitude: float,
+      longitude: float
     },
-    displayName: str,
-    email: str,
-    familyName: str,
+    editable: bool,
     members: [
       {
-        ageGroup: str,
-        bic: bool,
-        birthCountry: str,
-        birthDate: str,
-        birthPlace: str,
-        classes: [
-          str
-        ],
+        countryId: int,
         displayName: str,
-        email: str,
-        familyName: str,
-        father: {
-          birthDate: str,
-          displayName: str,
-          uuid: str
+        editable: bool,
+        email: {
+          email: str
         },
         givenName: str,
         head: bool,
         householdUuid: str,
-        individualId: int,
-        marriage: {
-          country: str,
-          date: str,
-          place: str,
-          sealingDate: str,
-          spouse: {
-            birthDate: str,
-            displayName: str,
-            uuid: str
-          },
-          temple: str
+        name: str,
+        phone: {
+          country: int,
+          e164: str,
+          number: str
         },
-        member: bool,
-        missionCountry: str,
-        missionLanguage: str,
-        mother: {
-          birthDate: str,
-          displayName: str,
-          uuid: str
-        },
-        mrn: str,
-        officialName: str,
-        ordinances: [
-          {
-            date: str,
-            type: str
-          }
-        ],
-        permissions: [
-          str
-        ],
-        positions: [
-          {
-            activeDate: str,
-            name: str,
-            setApart: bool,
-            type: str,
-            unitName: str,
-            unitNumber: int,
-            uuid: str
-          }
-        ],
-        preferredName: str,
-        priesthood: str,
-        priorUnit: {
-          name: str,
-          unitNumber: int,
-          unitType: str
-        },
-        priorUnitMoveOutDate: str,
         privacy: {
+          birthDate: str,
           email: str,
-          master: str,
+          phone: str,
           photo: str
         },
-        sex: str,
-        templeRecommendExpiration: str,
-        templeRecommendStatus: str,
-        templeRecommendType: str,
-        unitMoveInDate: str,
+        surname: str,
+        unitNumber: int,
         uuid: str
       }
     ],
-    permissions: [
-      str
-    ],
-    phone: str,
+    movable: bool,
+    name: str,
     privacy: {
       address: str,
       coordinates: str,
-      email: str,
-      master: str,
-      phone: str,
       photo: str
     },
+    surname: str,
     unitNumber: int,
     uuid: str,
     verified: bool

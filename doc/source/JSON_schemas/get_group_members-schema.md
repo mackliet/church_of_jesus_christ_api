@@ -3,7 +3,7 @@
     {
       calling: NoneType,
       cmisIndividualId: int,
-      emailAddress: NoneType,
+      emailAddress: str,
       mrn: NoneType,
       name: str,
       positionDisplayOrder: NoneType,

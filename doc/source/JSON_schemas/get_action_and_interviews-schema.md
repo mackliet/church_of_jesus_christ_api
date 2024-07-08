@@ -1,55 +1,30 @@
-[
-  {
-    description: str,
-    key: str,
-    list: [
-      {
-        accountable: bool,
-        action: str,
-        actualAge: int,
-        actualAgeInMonths: int,
-        address: str,
-        age: int,
-        ailActionType: str,
-        birthDate: str,
-        birthDateFormatted: str,
-        birthDateSort: str,
-        birthDayFormatted: str,
-        birthDaySort: str,
-        calling: NoneType,
-        confirmationDate: NoneType,
-        confirmationDateFormatted: NoneType,
-        email: NoneType,
-        formattedMrn: str,
-        gender: str,
-        genderCode: int,
-        genderLabelShort: str,
-        householdEmail: str,
-        householdPhone: str,
-        id: int,
-        interviewComplete: bool,
-        interviewDate: NoneType,
-        mrn: str,
-        name: str,
-        nameOrder: int,
-        nonMember: bool,
-        notAccountable: bool,
-        outOfUnitMember: bool,
-        phone: str,
-        priesthood: NoneType,
-        priesthoodCode: NoneType,
-        priesthoodType: NoneType,
-        setApart: bool,
-        spokenName: str,
-        status: str,
-        sustainedDate: NoneType,
-        unitName: str,
-        unitNumber: int,
-        visible: NoneType
-      }
-    ],
-    tab: str,
-    title: str,
-    type: str
-  }
-]
+{
+  data: [
+    {
+      items: [
+        {
+          age: int,
+          birthdate: str,
+          birthdateFormatted: str,
+          email: NoneType,
+          gender: str,
+          husband: NoneType,
+          interviewDate: NoneType,
+          interviewDateDisplay: NoneType,
+          name: str,
+          personId: str,
+          phoneNumber: str,
+          status: str,
+          statusDisplay: str,
+          suggestedAction: str,
+          suggestedActionDisplay: str,
+          unitName: str,
+          unitNumber: int,
+          wife: NoneType
+        }
+      ],
+      sectionTypeKey: str,
+      tab: str
+    }
+  ]
+}

@@ -9,6 +9,6 @@
     nameOrder: int,
     nextUnitName: NoneType,
     nextUnitNumber: NoneType,
-    priorUnit: str
+    priorUnit: NoneType
   }
 ]
