@@ -146,10 +146,7 @@ class ChurchOfJesusChristAPI(object):
         self.__session.get(_host("lcr"))
         self.__session.get(_host("directory"))
 
-        self.__user_details = self.__get_JSON(
-            f"{_host('www')}/api/dozr/services/profile/1/getProfile",
-            timeout_sec,
-        )["data"]["person"]
+        self.__user_details = self.__get_JSON(_endpoints["user"], timeout_sec)
 
         self.__get_default_org_id()
 
@@ -169,21 +166,15 @@ class ChurchOfJesusChristAPI(object):
 
         if self.__user_details:
             endpoint = endpoint.replace(
-                "{unit}",
-                default_if_none(
-                    unit, self.__user_details["membershipUnit"]["unitNumber"]
-                ),
+                "{unit}", default_if_none(unit, self.__user_details["homeUnits"][0])
             )
             endpoint = endpoint.replace(
                 "{parent_unit}",
-                default_if_none(
-                    parent_unit,
-                    self.__user_details["membershipUnit"]["parentUnit"]["unitNumber"],
-                ),
+                default_if_none(parent_unit, self.__user_details["parentUnits"][0]),
             )
             endpoint = endpoint.replace(
                 "{member_id}",
-                default_if_none(member_id, self.__user_details["legacyCmisId"]),
+                default_if_none(member_id, self.__user_details["individualId"]),
             )
             endpoint = endpoint.replace(
                 "{uuid}", default_if_none(uuid, self.__user_details["uuid"])
