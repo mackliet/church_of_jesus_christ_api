@@ -148,7 +148,11 @@ class ChurchOfJesusChristAPI(object):
 
         self.__user_details = self.__get_JSON(_endpoints["user"], timeout_sec)
 
-        self.__get_default_org_id()
+        # This fails if user doesn't have LCR access
+        try:
+            self.__get_default_org_id()
+        except Exception:
+            pass
 
     def __endpoint(
         self,
