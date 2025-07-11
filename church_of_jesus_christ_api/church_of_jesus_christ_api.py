@@ -130,10 +130,32 @@ class ChurchOfJesusChristAPI(object):
             f"{_host('id')}/idp/idx/introspect",
             json={"stateToken": state_token},
         )
-        state_handle = self.__session.post(
+        # Send username/token, retrieve json response
+        identify_resp = self.__session.post(
             f"{_host('id')}/idp/idx/identify",
             json={"identifier": username, "stateHandle": state_token},
-        ).json()["stateHandle"]
+        ).json()
+        state_handle = identify_resp["stateHandle"]
+        # Retrieve password authenticator ID (in case it changes by session,etc)
+        authenticator_id = next(
+            opt["value"]["form"]["value"][0]["value"]
+            for item in identify_resp.get("remediation", {}).get("value", [])
+            if item.get("name") == "select-authenticator-authenticate"
+            for opt in item.get("value", [])[0].get("options", [])
+            if opt.get("label", "").lower() == "password"
+        )
+        # Post authentication type: password
+        self.__session.post(
+            f"{_host('id')}/idp/idx/challenge",
+            json={
+                "authenticator": {
+                    "id": authenticator_id,
+                    "methodType": "password"
+                },
+                "stateHandle": state_handle
+            }
+        )
+        # Login
         challenge_resp = self.__session.post(
             f"{_host('id')}/idp/idx/challenge/answer",
             json={"credentials": {"passcode": password}, "stateHandle": state_handle},
