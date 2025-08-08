@@ -10,6 +10,7 @@ import datetime
 import requests
 from typing import List, Dict, Any, Union, Optional
 import re
+from playwright.sync_api import sync_playwright
 
 JSONType = Union[Dict[str, Any], List[Any]]
 
@@ -107,7 +108,7 @@ class ChurchOfJesusChristAPI(object):
             Enables SSL verification (true by default). Useful for debugging HTTPS with a proxy
         timeout_sec : int
             Number of seconds to wait for a response when making a request
-        """
+       """
 
         self.__session = requests.Session()
         if proxies is not None:
@@ -119,34 +120,52 @@ class ChurchOfJesusChristAPI(object):
         self.__org_id = None
         self.__timeout_sec = timeout_sec or 15
 
-        html_resp = self.__session.get(
-            f"{_host('www')}/services/platform/v4/login",
-            timeout=self.__timeout_sec,
-        ).content.decode("unicode_escape")
+        p = sync_playwright().start()
+        browser = p.chromium.launch(headless=True)
+        ctx = browser.new_context()
+        page = ctx.new_page()
 
-        # Super hacky, but it works to grab the state token out of the JSON-ish object within the script
-        state_token = re.search(r"\"stateToken\":\"([^\"]+)\"", html_resp).groups()[0]
-        self.__session.post(
-            f"{_host('id')}/idp/idx/introspect",
-            json={"stateToken": state_token},
+        # Go to login page
+        page.goto(f"{_host('www')}/services/platform/v4/login",
+                  wait_until="networkidle",
+                  timeout=self.__timeout_sec * 1000)
+
+        # Fill username and submit
+        page.locator("input:visible").first.fill(username)
+        page.keyboard.press("Enter")
+
+        # Fill password and submit
+        page.locator("input[type='password']:visible").first.fill(password)
+        page.keyboard.press("Enter")
+        page.wait_for_url(f"{_host('www')}/**")
+
+        #Warm up and collect cookies from lcr and directory
+        all_cookies = []
+
+        page.goto(_host("lcr"), wait_until="load")
+        page.wait_for_url(_host("lcr"))
+        all_cookies.extend(ctx.cookies())
+
+        page.goto(_host("directory"), wait_until="load")
+        page.wait_for_url(_host("directory"))
+        all_cookies.extend(ctx.cookies())
+
+        unique_cookies = {(c["name"], c["domain"]): c for c in all_cookies}.values()
+
+        self.__access_token = next(
+            c["value"] for c in unique_cookies if c["name"] == "oauth_id_token"
         )
-        state_handle = self.__session.post(
-            f"{_host('id')}/idp/idx/identify",
-            json={"identifier": username, "stateHandle": state_token},
-        ).json()["stateHandle"]
-        challenge_resp = self.__session.post(
-            f"{_host('id')}/idp/idx/challenge/answer",
-            json={"credentials": {"passcode": password}, "stateHandle": state_handle},
-        ).json()
-        self.__session.get(challenge_resp["success"]["href"])
-        self.__access_token = self.__session.cookies.get_dict()["oauth_id_token"]
-        self.__session.cookies.set("owp", self.__access_token)
 
-        # Does lcr and directory login stuff
-        self.__session.get(_host("lcr"))
-        self.__session.get(_host("directory"))
+        for c in unique_cookies:
+            self.__session.cookies.set(
+                c["name"], c["value"], domain=c["domain"].lstrip(".")
+            )
 
-        self.__user_details = self.__get_JSON(_endpoints["user"], timeout_sec)
+        # Close Playwright
+        browser.close()
+        p.stop()
+
+        self.__user_details = self.__get_JSON(_endpoints["user"], self.__timeout_sec)
 
         # This fails if user doesn't have LCR access
         try:
